@@ -1,0 +1,109 @@
+@font-face {
+	font-family: "AvenirNextCyr-Bold";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-Bold.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-BoldItalic";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-BoldItalic.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-Demi";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-Demi.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-DemiItalic";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-DemiItalic.otf");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-Heavy";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-Heavy.otf");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-HeavyItalic";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-HeavyItalic.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-Italic";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-Italic.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-Light";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-Light.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-LightItalic";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-LightItalic.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-Medium";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-Medium.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-MediumItalic";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-MediumItalic.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-Regular";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-Regular.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-Thin";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-Thin.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-ThinItalic";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-ThinItalic.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-UltraLight";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-UltraLight.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "AvenirNextCyr-UltraLightIt";
+	src: url("../fonts/AvenirNextCyrillic/AvenirNextCyr-UltraLightIt.otf");
+	font-style: normal;
+	font-weight: normal;
+}

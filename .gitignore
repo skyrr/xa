@@ -1,0 +1,7 @@
+.idea
+
+.vagrant/
+Vagrantfile
+
+wp-content/uploads
+wp-config.php

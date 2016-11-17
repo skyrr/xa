@@ -1,0 +1,458 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Imperia\n"
+"POT-Creation-Date: 2016-03-17 10:36+0200\n"
+"PO-Revision-Date: 2016-03-17 10:57+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: en_US\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: archive-post-news.php:37 archive-post-realty.php:97 single-post-news.php:43
+#: single-post-realty.php:65
+msgid "На главную"
+msgstr "Home"
+
+#: archive-post-news.php:38 includes/custom-post-types/post-news.php:5
+#: includes/custom-post-types/post-news.php:16 sidebar.php:21
+#: single-post-news.php:44
+msgid "Новости"
+msgstr "News"
+
+#: archive-post-news.php:63 sidebar.php:33
+msgid "Читать подробнее"
+msgstr "Read more"
+
+#: archive-post-news.php:89 archive-post-realty.php:256
+msgid "Предыдущая"
+msgstr "Previous"
+
+#: archive-post-news.php:90 archive-post-realty.php:257
+msgid "Следующая"
+msgstr "Next"
+
+#: archive-post-realty.php:8
+msgid "Продажа недвижимости"
+msgstr "Property for sale"
+
+#: archive-post-realty.php:10
+msgid "Продажа квартир"
+msgstr "Apartments for sale"
+
+#: archive-post-realty.php:12
+msgid "Продажа коммерции"
+msgstr "Commerce for sale"
+
+#: archive-post-realty.php:15
+msgid "Аренда недвижимости"
+msgstr "Rental property"
+
+#: archive-post-realty.php:17
+msgid "Аренда квартир"
+msgstr "Apartments for rent"
+
+#: archive-post-realty.php:19
+msgid "Аренда коммерции"
+msgstr "Rental commerce"
+
+#: archive-post-realty.php:68
+msgid "Результаты поиска"
+msgstr "Search results"
+
+#: archive-post-realty.php:81
+msgid "Сортировка"
+msgstr "Sort"
+
+#: archive-post-realty.php:83
+msgid "по дате"
+msgstr "by date"
+
+#: archive-post-realty.php:84
+msgid "по цене"
+msgstr "by price"
+
+#: archive-post-realty.php:85
+msgid "по размеру"
+msgstr "by size"
+
+#: archive-post-realty.php:99
+msgid "Вся недвижимость"
+msgstr "All properties"
+
+#: archive-post-realty.php:141 includes/custom-post-types/post-realty.php:54
+#: includes/custom-post-types/post-realty.php:72
+#: includes/imperia/Search.php:237 index.php:47 index.php:182 index.php:266
+#: search-catalog.php:8 search-page.php:8 sidebar.php:7 sidebar.php:12
+#: single-post-realty.php:12
+msgid "Аренда"
+msgstr "Rent"
+
+#: archive-post-realty.php:144 includes/custom-post-types/post-realty.php:55
+#: includes/custom-post-types/post-realty.php:73
+#: includes/imperia/Search.php:230 index.php:48 index.php:185 index.php:269
+#: search-catalog.php:9 search-page.php:9 sidebar.php:6 sidebar.php:11
+#: single-post-realty.php:15
+msgid "Купить"
+msgstr "Buy"
+
+#: archive-post-realty.php:162 archive-post-realty.php:199 index.php:201
+#: index.php:285 single-post-realty.php:108
+msgid "Название улицы"
+msgstr "Street name"
+
+#: archive-post-realty.php:166 archive-post-realty.php:203
+#: includes/custom-taxonomies/taxonomy-region.php:8 index.php:205 index.php:289
+#: single-post-realty.php:113
+msgid "Район"
+msgstr "Region"
+
+#: archive-post-realty.php:168 archive-post-realty.php:211 index.php:207
+#: index.php:291 single-post-realty.php:125
+msgid "Площадь"
+msgstr "Area"
+
+#: archive-post-realty.php:168 archive-post-realty.php:211 index.php:207
+#: index.php:291 single-post-realty.php:125
+msgid "Номер телефона"
+msgstr "Phone number"
+
+#: archive-post-realty.php:169 archive-post-realty.php:212 index.php:208
+#: index.php:292 single-post-realty.php:126
+msgid "м"
+msgstr "m"
+
+#: archive-post-realty.php:174 archive-post-realty.php:207 index.php:213
+#: index.php:297 single-post-realty.php:119
+msgid "Количетво комнат"
+msgstr "Number of rooms"
+
+#: archive-post-realty.php:176 archive-post-realty.php:221 index.php:215
+#: index.php:299
+msgid "Цена"
+msgstr "Price"
+
+#: archive-post-realty.php:177 archive-post-realty.php:222 index.php:216
+#: index.php:300 single-post-realty.php:132
+msgid "грн"
+msgstr "UAH"
+
+#: archive-post-realty.php:180 archive-post-realty.php:215 index.php:219
+#: index.php:303
+msgid "Подробнее"
+msgstr "More"
+
+#: footer.php:20 page-contacts.php:40
+msgid "Адрес"
+msgstr "Address"
+
+#: footer.php:27 page-contacts.php:52
+msgid "Тел."
+msgstr "Phone:"
+
+#: header-page.php:29 index.php:24 sidebar.php:17
+msgid "Обратный звонок"
+msgstr "Callback"
+
+#: includes/custom-post-types/post-news.php:6
+msgid "Новость"
+msgstr "News"
+
+#: includes/custom-post-types/post-news.php:7
+msgid "Добавить новость"
+msgstr "Add news"
+
+#: includes/custom-post-types/post-news.php:8
+msgid "Добавить новую публикацию"
+msgstr "Add new post"
+
+#: includes/custom-post-types/post-news.php:9
+msgid "Редактировать новость"
+msgstr "Edit News"
+
+#: includes/custom-post-types/post-news.php:10
+msgid "Новая публикация"
+msgstr "New post"
+
+#: includes/custom-post-types/post-news.php:11
+msgid "Посмотреть новость"
+msgstr "View"
+
+#: includes/custom-post-types/post-news.php:12
+msgid "Найти новость"
+msgstr "Find news"
+
+#: includes/custom-post-types/post-news.php:13
+msgid "Новостей не найдено"
+msgstr "News not found"
+
+#: includes/custom-post-types/post-news.php:14
+msgid "В корзине новостей не найдено"
+msgstr "No news found in Trash"
+
+#: includes/custom-post-types/post-realty.php:5
+#: includes/custom-post-types/post-realty.php:16
+msgid "Недвижимость"
+msgstr "Real estate"
+
+#: includes/custom-post-types/post-realty.php:6
+msgid "Обьект"
+msgstr "Object"
+
+#: includes/custom-post-types/post-realty.php:7
+msgid "Добавить обьект"
+msgstr "Add object"
+
+#: includes/custom-post-types/post-realty.php:8
+msgid "Добавить новый обьект"
+msgstr "Add new object"
+
+#: includes/custom-post-types/post-realty.php:9
+msgid "Редактировать обьект"
+msgstr "Edit object"
+
+#: includes/custom-post-types/post-realty.php:10
+msgid "Новый обьект"
+msgstr "New object"
+
+#: includes/custom-post-types/post-realty.php:11
+msgid "Посмотреть обьект"
+msgstr "View object"
+
+#: includes/custom-post-types/post-realty.php:12
+msgid "Найти обьект"
+msgstr "Find object"
+
+#: includes/custom-post-types/post-realty.php:13
+msgid "Обьектов не найдено"
+msgstr "Objects not found"
+
+#: includes/custom-post-types/post-realty.php:14
+msgid "В корзине обьектов не найдено"
+msgstr "No objects found in Trash"
+
+#: includes/custom-post-types/post-realty.php:53
+#: includes/custom-post-types/post-realty.php:75
+msgid "Операция"
+msgstr "Operation"
+
+#: includes/custom-post-types/post-realty.php:61
+#: includes/custom-post-types/post-realty.php:82
+msgid "Тип"
+msgstr "Type"
+
+#: includes/custom-post-types/post-realty.php:62
+#: includes/custom-post-types/post-realty.php:79 index.php:51
+#: search-catalog.php:12 search-page.php:12
+msgid "Квартира"
+msgstr "Apartment"
+
+#: includes/custom-post-types/post-realty.php:63
+#: includes/custom-post-types/post-realty.php:80
+#: includes/imperia/Search.php:253 index.php:52 search-catalog.php:13
+#: search-page.php:13 single-post-realty.php:26
+msgid "Коммерция"
+msgstr "Commerce"
+
+#: includes/custom-post-types/post-realty.php:68
+msgid "Только топ предложения: "
+msgstr "Top offer only:"
+
+#: includes/custom-post-types/post-realty.php:87
+#: includes/custom-post-types/post-realty.php:89
+msgid "Топ предложение"
+msgstr "Top offer"
+
+#: includes/custom-taxonomies/taxonomy-region.php:7
+#: includes/custom-taxonomies/taxonomy-region.php:17
+msgid "Районы"
+msgstr "Regions"
+
+#: includes/custom-taxonomies/taxonomy-region.php:9
+msgid "Найти район"
+msgstr "Find region"
+
+#: includes/custom-taxonomies/taxonomy-region.php:10
+#: includes/imperia/Search.php:16
+msgid "Все районы"
+msgstr "All regions"
+
+#: includes/custom-taxonomies/taxonomy-region.php:11
+msgid "Родительский район"
+msgstr "Parent region"
+
+#: includes/custom-taxonomies/taxonomy-region.php:12
+msgid "Родительский район:"
+msgstr "Parent region:"
+
+#: includes/custom-taxonomies/taxonomy-region.php:13
+msgid "Редактировать район"
+msgstr "Edit region"
+
+#: includes/custom-taxonomies/taxonomy-region.php:14
+msgid "Обновить район"
+msgstr "Update region"
+
+#: includes/custom-taxonomies/taxonomy-region.php:15
+msgid "Добавить новый район"
+msgstr "Add new region"
+
+#: includes/custom-taxonomies/taxonomy-region.php:16
+msgid "Новое имя района"
+msgstr "New region name"
+
+#: includes/imperia/Search.php:246 sidebar.php:4 single-post-realty.php:23
+msgid "Квартиры"
+msgstr "Apartments"
+
+#: index.php:64 search-catalog.php:25 search-page.php:23
+msgid "Площадь от"
+msgstr "Area from"
+
+#: index.php:68 search-catalog.php:29 search-page.php:27
+msgid "Этаж от"
+msgstr "Floor from"
+
+#: index.php:76 index.php:80 index.php:100 index.php:104 search-catalog.php:37
+#: search-catalog.php:41 search-catalog.php:61 search-catalog.php:65
+#: search-page.php:35 search-page.php:39 search-page.php:59 search-page.php:63
+msgid "до"
+msgstr "to"
+
+#: index.php:88 search-catalog.php:49 search-page.php:47
+msgid "Цена от"
+msgstr "Price from"
+
+#: index.php:92 search-catalog.php:53 search-page.php:51
+msgid "Количество <br> комнат от"
+msgstr "Number <br> of rooms"
+
+#: index.php:111 search-catalog.php:72 search-page.php:70
+msgid "Кирпич"
+msgstr "Brick"
+
+#: index.php:114 search-catalog.php:75 search-page.php:73
+msgid "Монолит"
+msgstr "Monolith"
+
+#: index.php:119 search-catalog.php:80 search-page.php:78
+msgid "Панельный"
+msgstr "Panel"
+
+#: index.php:122 search-catalog.php:83 search-page.php:81
+msgid "Новострой"
+msgstr "New building"
+
+#: index.php:126 search-catalog.php:87 search-page.php:85
+msgid "Искать"
+msgstr "Search"
+
+#: index.php:128 search-catalog.php:89 search-page.php:87
+msgid "Очистить"
+msgstr "Clear selection"
+
+#: index.php:166
+msgid "Топ-предложение квартиры"
+msgstr "Top offer apartments"
+
+#: index.php:250
+msgid "Топ-предложение коммерческая недвижимость"
+msgstr "Top offer commercial property"
+
+#: index.php:319
+msgid "Хотите продать квартиру или недвижимость?"
+msgstr "Do you want to sell an apartment or commercial property?"
+
+#: index.php:320
+msgid "Свяжитесь с нами и мы поможем Вам"
+msgstr "Contact us and we will help you"
+
+#: index.php:326 popup-callback.php:10 single-post-realty.php:148
+msgid "Заявка принята"
+msgstr "Application accepted"
+
+#: index.php:330 popup-callback.php:20 single-post-realty.php:158
+msgid "Ваше имя"
+msgstr "Your name"
+
+#: index.php:333 popup-callback.php:30 single-post-realty.php:168
+msgid "Ваш Email"
+msgstr "Your Email"
+
+#: index.php:336 popup-callback.php:25 single-post-realty.php:163
+msgid "Ваш телефон"
+msgstr "Your phone"
+
+#: index.php:339 popup-callback.php:9 popup-callback.php:37
+#: single-post-realty.php:181
+msgid "Заказать звонок"
+msgstr "Request a callback"
+
+#: page-about.php:21 page-contacts.php:19 page-team.php:19
+msgid "Подбор недвижимости"
+msgstr "Property search"
+
+#: page-contacts.php:45
+msgid "Офис"
+msgstr "Office"
+
+#: page-contacts.php:78
+msgid "Соц."
+msgstr "Social"
+
+#: sidebar.php:9
+msgid "Коммерческая<br>недвижимость"
+msgstr "Commercial <br> property"
+
+#: sidebar.php:16
+msgid "Контакты"
+msgstr "Contacts"
+
+#: single-post-news.php:64
+msgid "просмотров"
+msgstr "views"
+
+#: single-post-news.php:80 single-post-news.php:82 single-post-news.php:84
+msgid "Источник"
+msgstr "Source"
+
+#: single-post-news.php:97 single-post-realty.php:191
+msgid "Поделится"
+msgstr "Share"
+
+#: single-post-realty.php:138 single-post-realty.php:147
+msgid "Заявка на осмотр"
+msgstr "Application for inspection"
+
+#: single-post-realty.php:173
+msgid "Коментарий"
+msgstr "Comment"
+
+#: single-post-realty.php:208
+msgid "Карта"
+msgstr "Location"
+
+#. Theme Name of the plugin/theme
+msgid "Imperia"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Theme for Realty Empire (Khmelnitsky, Ukraine)."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "knopix"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://knopix.net/"
+msgstr ""

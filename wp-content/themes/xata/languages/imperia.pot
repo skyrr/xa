@@ -1,0 +1,537 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Imperia\n"
+"POT-Creation-Date: 2016-10-24 15:40+0300\n"
+"PO-Revision-Date: 2016-03-16 18:44+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: archive-post-news.php:35 archive-post-realty.php:96 single-post-news.php:41
+#: single-post-realty.php:64
+msgid "На главную"
+msgstr ""
+
+#: archive-post-news.php:36 includes/custom-post-types/post-news.php:5
+#: includes/custom-post-types/post-news.php:16 sidebar.php:21
+#: single-post-news.php:42
+msgid "Новости"
+msgstr ""
+
+msgid "Номер телефона"
+msgstr ""
+
+#: archive-post-news.php:62 sidebar.php:33
+msgid "Читать подробнее"
+msgstr ""
+
+#: archive-post-news.php:84 archive-post-realty.php:335
+msgid "Предыдущая"
+msgstr ""
+
+#: archive-post-news.php:85 archive-post-realty.php:336
+msgid "Следующая"
+msgstr ""
+
+#: archive-post-realty.php:8
+msgid "Продажа недвижимости"
+msgstr ""
+
+#: archive-post-realty.php:10
+msgid "Продажа квартир"
+msgstr ""
+
+#: archive-post-realty.php:12
+msgid "Продажа коммерции"
+msgstr ""
+
+#: archive-post-realty.php:15
+msgid "Аренда недвижимости"
+msgstr ""
+
+#: archive-post-realty.php:17
+msgid "Аренда квартир"
+msgstr ""
+
+#: archive-post-realty.php:19
+msgid "Аренда коммерции"
+msgstr ""
+
+#: archive-post-realty.php:66
+msgid "Результаты поиска"
+msgstr ""
+
+#: archive-post-realty.php:80
+msgid "Сортировка"
+msgstr ""
+
+#: archive-post-realty.php:82
+msgid "по дате"
+msgstr ""
+
+#: archive-post-realty.php:83
+msgid "по цене"
+msgstr ""
+
+#: archive-post-realty.php:84
+msgid "по размеру"
+msgstr ""
+
+#: archive-post-realty.php:98
+msgid "Вся недвижимость"
+msgstr ""
+
+#: archive-post-realty.php:143 includes/custom-post-types/post-realty.php:54
+#: includes/custom-post-types/post-realty.php:95 includes/xata/Search.php:296
+#: index.php:51 index.php:193 index.php:348 search-catalog.php:11
+#: search-page.php:11 sidebar.php:7 sidebar.php:12 single-post-realty.php:12
+msgid "Аренда"
+msgstr ""
+
+#: archive-post-realty.php:146 includes/custom-post-types/post-realty.php:55
+#: includes/custom-post-types/post-realty.php:96 includes/xata/Search.php:289
+#: index.php:50 index.php:196 index.php:351 search-catalog.php:10
+#: search-page.php:10 sidebar.php:6 sidebar.php:11 single-post-realty.php:15
+msgid "Купить"
+msgstr ""
+
+#: archive-post-realty.php:168 archive-post-realty.php:271 index.php:214
+#: index.php:369 single-post-realty.php:101
+msgid "Название улицы"
+msgstr ""
+
+#: archive-post-realty.php:176 archive-post-realty.php:275
+#: includes/custom-taxonomies/taxonomy-region.php:8 index.php:222 index.php:375
+#: single-post-realty.php:106
+msgid "Район"
+msgstr ""
+
+#: archive-post-realty.php:192 index.php:238 single-post-realty.php:112
+msgid "Этаж"
+msgstr ""
+
+#: archive-post-realty.php:208 archive-post-realty.php:279 index.php:255
+#: index.php:383 single-post-realty.php:118
+msgid "Количетво комнат"
+msgstr ""
+
+#: archive-post-realty.php:224 archive-post-realty.php:283 index.php:272
+#: index.php:377 single-post-realty.php:124
+msgid "Площадь"
+msgstr ""
+
+#: archive-post-realty.php:231 archive-post-realty.php:284 index.php:280
+#: index.php:378 single-post-realty.php:125
+msgid "м"
+msgstr ""
+
+#: archive-post-realty.php:240 archive-post-realty.php:293 index.php:289
+#: index.php:385
+msgid "Цена"
+msgstr ""
+
+#: archive-post-realty.php:252 archive-post-realty.php:287 index.php:301
+#: index.php:389
+msgid "Подробнее"
+msgstr ""
+
+#: archive-post-realty.php:294
+msgid "грн"
+msgstr ""
+
+#: footer.php:15 page-contacts.php:38
+msgid "Адрес"
+msgstr ""
+
+#: footer.php:21 page-contacts.php:65
+msgid "Тел."
+msgstr ""
+
+#: header-page.php:40 index.php:33 sidebar.php:17
+msgid "Обратный звонок"
+msgstr ""
+
+#: includes/custom-post-types/post-news.php:6
+msgid "Новость"
+msgstr ""
+
+#: includes/custom-post-types/post-news.php:7
+msgid "Добавить новость"
+msgstr ""
+
+#: includes/custom-post-types/post-news.php:8
+msgid "Добавить новую публикацию"
+msgstr ""
+
+#: includes/custom-post-types/post-news.php:9
+msgid "Редактировать новость"
+msgstr ""
+
+#: includes/custom-post-types/post-news.php:10
+msgid "Новая публикация"
+msgstr ""
+
+#: includes/custom-post-types/post-news.php:11
+msgid "Посмотреть новость"
+msgstr ""
+
+#: includes/custom-post-types/post-news.php:12
+msgid "Найти новость"
+msgstr ""
+
+#: includes/custom-post-types/post-news.php:13
+msgid "Новостей не найдено"
+msgstr ""
+
+#: includes/custom-post-types/post-news.php:14
+msgid "В корзине новостей не найдено"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:5
+#: includes/custom-post-types/post-realty.php:16
+msgid "Недвижимость"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:6
+msgid "Обьект"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:7
+msgid "Добавить обьект"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:8
+msgid "Добавить новый обьект"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:9
+msgid "Редактировать обьект"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:10
+msgid "Новый обьект"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:11
+msgid "Посмотреть обьект"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:12
+msgid "Найти обьект"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:13
+msgid "Обьектов не найдено"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:14
+msgid "В корзине обьектов не найдено"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:53
+#: includes/custom-post-types/post-realty.php:98
+msgid "Операция"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:61
+#: includes/custom-post-types/post-realty.php:107
+msgid "Тип"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:62
+#: includes/custom-post-types/post-realty.php:102 index.php:56
+#: search-catalog.php:16 search-page.php:16
+msgid "Квартира"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:63
+#: includes/custom-post-types/post-realty.php:103 includes/xata/Search.php:312
+#: index.php:57 search-catalog.php:17 search-page.php:17
+#: single-post-realty.php:26
+msgid "Коммерция"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:64
+#: includes/custom-post-types/post-realty.php:104 index.php:58
+#: search-catalog.php:18 search-page.php:18
+msgid "Дом"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:65
+#: includes/custom-post-types/post-realty.php:105 index.php:59
+#: search-catalog.php:19 search-page.php:19
+msgid "Земельный участок"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:70
+msgid "Только мои обьекты: "
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:73
+msgid "Только топ предложения: "
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:76
+msgid "Количество комнат: "
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:79
+msgid "Площадь: "
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:82
+msgid "Этаж: "
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:90
+msgid "Фото"
+msgstr ""
+
+#: includes/custom-post-types/post-realty.php:112
+#: includes/custom-post-types/post-realty.php:114
+msgid "Топ предложение"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:6
+msgctxt "taxonomy general name"
+msgid "Застройщики"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:7
+msgctxt "taxonomy singular name"
+msgid "Застройщик"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:8
+msgid "Поиск застройщиков"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:9
+msgid "Популярные застройщики"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:10
+msgid "Все застройщики"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:13
+msgid "Редактировать застройщика"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:14
+msgid "Обновить застройщика"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:15
+msgid "Добавить нового застройщика"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:16
+msgid "Название новго застройщика"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:17
+msgid "Разделяйте застройщиков зяпятыми"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:18
+msgid "Добавить или удалить застройщиков"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:19
+msgid "Выберите из найболее популярных застройщиков"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:20
+msgid "Застройщиков не найдено."
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-builder.php:21
+msgid "Застройщики"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-region.php:7
+#: includes/custom-taxonomies/taxonomy-region.php:17
+msgid "Районы"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-region.php:9
+msgid "Найти район"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-region.php:10
+#: includes/xata/Search.php:16
+msgid "Все районы"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-region.php:11
+msgid "Родительский район"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-region.php:12
+msgid "Родительский район:"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-region.php:13
+msgid "Редактировать район"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-region.php:14
+msgid "Обновить район"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-region.php:15
+msgid "Добавить новый район"
+msgstr ""
+
+#: includes/custom-taxonomies/taxonomy-region.php:16
+msgid "Новое имя района"
+msgstr ""
+
+#: includes/xata/Currency.php:116
+msgid "Цена уточняется"
+msgstr ""
+
+#: includes/xata/Search.php:305 sidebar.php:4 single-post-realty.php:23
+msgid "Квартиры"
+msgstr ""
+
+#: index.php:75 search-catalog.php:35 search-page.php:34
+msgid "Площадь от"
+msgstr ""
+
+#: index.php:79 search-catalog.php:39 search-page.php:38
+msgid "Этаж от"
+msgstr ""
+
+#: index.php:87 index.php:91 index.php:116 index.php:120 search-catalog.php:47
+#: search-catalog.php:51 search-catalog.php:76 search-catalog.php:80
+#: search-page.php:46 search-page.php:50 search-page.php:75 search-page.php:79
+msgid "до"
+msgstr ""
+
+#: index.php:104 search-catalog.php:64 search-page.php:63
+msgid "Цена от"
+msgstr ""
+
+#: index.php:108 search-catalog.php:68 search-page.php:67
+msgid "Количество <br> комнат от"
+msgstr ""
+
+#: index.php:137 search-catalog.php:97 search-page.php:96
+msgid "Искать"
+msgstr ""
+
+#: index.php:139 search-catalog.php:99 search-page.php:98
+msgid "Очистить"
+msgstr ""
+
+#: index.php:177
+msgid "Топ-предложение квартиры"
+msgstr ""
+
+#: index.php:332
+msgid "Топ-предложение коммерческая недвижимость"
+msgstr ""
+
+#: index.php:405
+msgid "Хотите продать квартиру или недвижимость?"
+msgstr ""
+
+#: index.php:406
+msgid "Свяжитесь с нами и мы поможем Вам"
+msgstr ""
+
+#: index.php:412 popup-callback.php:10 single-post-realty.php:150
+msgid "Заявка принята"
+msgstr ""
+
+#: index.php:416 popup-callback.php:20 single-post-realty.php:160
+msgid "Ваше имя"
+msgstr ""
+
+#: index.php:419 popup-callback.php:30 single-post-realty.php:170
+msgid "Ваш Email"
+msgstr ""
+
+#: index.php:422 popup-callback.php:25 single-post-realty.php:165
+msgid "Ваш телефон"
+msgstr ""
+
+#: index.php:425 popup-callback.php:9 popup-callback.php:37
+#: single-post-realty.php:183
+msgid "Заказать звонок"
+msgstr ""
+
+#: page-about.php:19 page-contacts.php:17 page-team.php:17
+msgid "Подбор недвижимости"
+msgstr ""
+
+#: page-contacts.php:57
+msgid "Офис"
+msgstr ""
+
+#: page-contacts.php:91
+msgid "Соц."
+msgstr ""
+
+#: sidebar.php:9
+msgid "Коммерческая<br>недвижимость"
+msgstr ""
+
+#: sidebar.php:16
+msgid "Контакты"
+msgstr ""
+
+#: single-post-news.php:62
+msgid "просмотров"
+msgstr ""
+
+#: single-post-news.php:78 single-post-news.php:80 single-post-news.php:82
+msgid "Источник"
+msgstr ""
+
+#: single-post-news.php:95 single-post-realty.php:193
+msgid "Поделится"
+msgstr ""
+
+#: single-post-realty.php:140 single-post-realty.php:149
+msgid "Заявка на осмотр"
+msgstr ""
+
+#: single-post-realty.php:175
+msgid "Коментарий"
+msgstr ""
+
+#: single-post-realty.php:217
+msgid "Карта"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Xata"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Theme for xata.if.ua"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "knopix"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://knopix.net/"
+msgstr ""
