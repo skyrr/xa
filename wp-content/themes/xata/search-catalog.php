@@ -6,30 +6,30 @@
     <div class="input-line2 search-line">
         <div class="container">
             <div class="row">
-                <div class="filters" id="filters" data-show="false">
-                    <div class="select-line">
-                        <div class="container">
-                            <div class="row selects">
-                                <div class="col-sm-4">
-                                    <select class="s-select1" name="operation">
-                                        <option value="sell" <?php if($search->getOperation() == 'sell') echo 'selected'; ?>><?php _e('Купить', 'imperia'); ?></option>
-                                        <option value="rent" <?php if($search->getOperation() == 'rent') echo 'selected'; ?>><?php _e('Аренда', 'imperia'); ?></option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-4">
-                                    <select class="s-select2" name="type">
-                                        <option value="apartment" <?php if($search->getType() == 'apartment') echo 'selected'; ?>><?php _e('Квартира', 'imperia'); ?></option>
-                                        <option value="commerce" <?php if($search->getType() == 'commerce') echo 'selected'; ?>><?php _e('Коммерция', 'imperia'); ?></option>
-                                        <option value="house" <?php if($search->getType() == 'house') echo 'selected'; ?>><?php _e('Дом', 'imperia'); ?></option>
-                                        <option value="territory" <?php if($search->getType() == 'territory') echo 'selected'; ?>><?php _e('Земельный участок', 'imperia'); ?></option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-4">
-                                    <?php echo $search->getRegionsSelect(); ?>
-                                </div>
+                <div class="select-line">
+                    <div class="container">
+                        <div class="row selects">
+                            <div class="col-sm-4">
+                                <select class="s-select1" name="operation">
+                                    <option value="sell" <?php if($search->getOperation() == 'sell') echo 'selected'; ?>><?php _e('Купить', 'imperia'); ?></option>
+                                    <option value="rent" <?php if($search->getOperation() == 'rent') echo 'selected'; ?>><?php _e('Аренда', 'imperia'); ?></option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <select class="s-select2" name="type">
+                                    <option value="apartment" <?php if($search->getType() == 'apartment') echo 'selected'; ?>><?php _e('Квартира', 'imperia'); ?></option>
+                                    <option value="commerce" <?php if($search->getType() == 'commerce') echo 'selected'; ?>><?php _e('Коммерция', 'imperia'); ?></option>
+                                    <option value="house" <?php if($search->getType() == 'house') echo 'selected'; ?>><?php _e('Дом', 'imperia'); ?></option>
+                                    <option value="territory" <?php if($search->getType() == 'territory') echo 'selected'; ?>><?php _e('Земельный участок', 'imperia'); ?></option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <?php echo $search->getRegionsSelect(); ?>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="filters" id="filters" data-show="false">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
                         <div class="col-xs-7 col-sm-7 col-md-7">
                             <div class="form-horizontal">
@@ -91,20 +91,21 @@
                         <div class="form-horizontal">
                             <div class="form-group form_group_custom currency">
                                 <?php echo $currency->getCurrencySelect('form-currency'); ?>
+                                <a class="clean" href="<?php echo home_url('realty'); ?>"><?php _e('Очистить', 'imperia'); ?></a>
+                                <p class="x"> </p>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="toggle-filter1">
-                    Детальніше <span class="glyphicon glyphicon-chevron-down"></span>
+                    Розширений пошук <span class="glyphicon glyphicon-chevron-down"></span>
                 </div>
-
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
                     <a class="find form_submit"><?php _e('Искать', 'imperia'); ?></a>
-                    <p class="x"> </p>
-                    <a class="clean" href="<?php echo home_url('realty'); ?>"><?php _e('Очистить', 'imperia'); ?></a>
                 </div>
+
             </div>
         </div>
     </div>

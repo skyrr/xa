@@ -49,6 +49,95 @@ class AdminFilters
     }
 
 
+    public function addPhoneNumber($meta_key, $label = '', $placeholder = '', $size = 5) {
+        if ( ! $this->checkPostType() ) return FALSE;
+        if ( ! isset($meta_key) ) return FALSE;
+
+        add_action('restrict_manage_posts', function() use ($meta_key, $label, $placeholder, $size) {
+            $value = ( ! empty($_GET[$meta_key]) ) ? $_GET[$meta_key] : '';
+            echo '<br><span style="white-space: nowrap"><label style="margin-right: 10px;">'.$label.'
+                <input type="text" placeholder="'.$placeholder.'" size="'.$size.'" name="'. $meta_key .'" value="'. $value .'"/>
+            </label></span>';
+        });
+
+        $this->addFilterMulti($meta_key);
+    }
+
+    public function addOwnerPhoneNumber($meta_key, $label = '', $placeholder = '', $size = 5) {
+        if ( ! $this->checkPostType() ) return FALSE;
+        if ( ! isset($meta_key) ) return FALSE;
+
+        add_action('restrict_manage_posts', function() use ($meta_key, $label, $placeholder, $size) {
+            $value = ( ! empty($_GET[$meta_key]) ) ? $_GET[$meta_key] : '';
+            echo '<span style="white-space: nowrap"><label style="margin-right: 10px;">'.$label.'
+                <input type="text" placeholder="'.$placeholder.'" size="'.$size.'" name="'. $meta_key .'" value="'. $value .'"/><br>
+            </label></span>';
+        });
+
+        $this->addOwnerFilterMulti($meta_key);
+    }
+
+    private function addFilterMulti($meta_key, $compare = '=', $type = 'CHAR') {
+        global $pagenow;
+        if ( ! is_admin() && $pagenow != 'edit.php') return FALSE;
+        if ( ! isset($_GET[$meta_key]) || $_GET[$meta_key] == '') return FALSE;
+
+        add_filter('parse_query', function($q) use ($meta_key, $compare, $type) {
+
+            $q->query_vars['meta_query'][] = array(
+                'relation' => 'OR',
+                array(
+                    'key'     => 'phone_number',
+                    'value'   => $_GET[$meta_key],
+                    'compare' => $compare,
+                    'type'    => $type
+                ),
+                array(
+                    'key'     => 'phone_number_2',
+                    'value'   => $_GET[$meta_key],
+                    'compare' => $compare,
+                    'type'    => $type
+                ),
+                array(
+                    'key'     => 'phone_number_3',
+                    'value'   => $_GET[$meta_key],
+                    'compare' => $compare,
+                    'type'    => $type
+                )
+            );
+        });
+    }
+
+    private function addOwnerFilterMulti($meta_key, $compare = '=', $type = 'CHAR') {
+        global $pagenow;
+        if ( ! is_admin() && $pagenow != 'edit.php') return FALSE;
+        if ( ! isset($_GET[$meta_key]) || $_GET[$meta_key] == '') return FALSE;
+
+        add_filter('parse_query', function($q) use ($meta_key, $compare, $type) {
+
+            $q->query_vars['meta_query'][] = array(
+                'relation' => 'OR',
+                array(
+                    'key'     => 'phone_number_owner_1',
+                    'value'   => $_GET[$meta_key],
+                    'compare' => $compare,
+                    'type'    => $type
+                ),
+                array(
+                    'key'     => 'phone_number_owner_2',
+                    'value'   => $_GET[$meta_key],
+                    'compare' => $compare,
+                    'type'    => $type
+                ),
+                array(
+                    'key'     => 'phone_number_owner_3',
+                    'value'   => $_GET[$meta_key],
+                    'compare' => $compare,
+                    'type'    => $type
+                )
+            );
+        });
+    }
 
 
     public function addBetweenNumeric($meta_key, $label = '', $placeholderFrom = '', $placeholderTo = '', $size = 3) {
@@ -64,7 +153,7 @@ class AdminFilters
                 <input type="text" placeholder="'.$placeholderTo.'" size="'.$size.'" name="'. $meta_key .'[]" value="'.$valueTo.'"/>
             </label></span>';
         });
-
+        var_dump();
         $this->addFilter($meta_key, 'BETWEEN', 'NUMERIC');
     }
 

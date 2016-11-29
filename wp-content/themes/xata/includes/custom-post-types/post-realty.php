@@ -89,6 +89,11 @@ $adminFilters->addTaxonomySelect('builder');
 // Photo column
 $adminFilters->addColumnImage('photos', __('Фото', 'imperia'), 'cb');
 
+// Author column
+$adminFilters->addColumn('Author', __('Менеджер', 'imperia'), 'title');
+
+// Phone column
+$adminFilters->addColumn('phone_number_owner_1', __('Номер тел.', 'imperia'), 'title', 'Номер телефону');
 
 // Operation column
 $values = array(
@@ -106,9 +111,15 @@ $values = array(
 );
 $adminFilters->addColumn('type', __('Тип', 'imperia'), 'operation', $values);
 
+
 // Top offer column
 $values = array(
     '0' => '',
     '1' => __('Топ предложение', 'imperia'),
 );
 $adminFilters->addColumn('top_offer', __('Топ предложение', 'imperia'), 'type', $values);
+
+// Filter by phone
+$adminFilters->addPhoneNumber('phone_number', __('Номер телефону менеджера: ', 'imperia'));
+
+$adminFilters->addOwnerPhoneNumber('owner_phone_number', __('Номер телефону власника: ', 'imperia'));

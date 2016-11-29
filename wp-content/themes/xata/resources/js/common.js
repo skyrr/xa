@@ -70,7 +70,7 @@
 		if (showed){
 			filterBlock.slideUp(400);
 			filterBlock.data('show', false);
-			$this.html('Детальніше <span class="glyphicon glyphicon-chevron-down"></span>');
+			$this.html('Розширений пошук <span class="glyphicon glyphicon-chevron-down"></span>');
 		}else {
 			filterBlock.slideDown(400);
 			filterBlock.data('show', true);
@@ -86,7 +86,7 @@
 		if (showed){
 			filterBlock.slideUp(400);
 			filterBlock.data('show', false);
-			$this.html('Детальніше <span class="glyphicon glyphicon-chevron-down"></span>');
+			$this.html('Розширений пошук <span class="glyphicon glyphicon-chevron-down"></span>');
 		}else {
 			filterBlock.slideDown(400);
 			filterBlock.data('show', true);

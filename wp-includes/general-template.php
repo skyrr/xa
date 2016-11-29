@@ -19,6 +19,13 @@
  *
  * @param string $name The name of the specialised header.
  */
+function dateToUA($date) {
+    $month = array("january"=>"01", "february"=>"02", "march"=>"03", "april"=>"04", "may"=>"05", "june"=>"06", "july"=>"07", "august"=>"08", "september"=>"09", "october"=>"10", "november"=>"11", "december"=>"12");
+//        $month = array("january"=>"січня", "february"=>"лютого", "march"=>"березня", "april"=>"квітня", "may"=>"травня", "june"=>"червня", "july"=>"липня", "august"=>"серпня", "september"=>"вересня", "october"=>"жовтня", "november"=>"листопада", "december"=>"грудня");
+//    $days = array("monday"=>"понеділок, ", "tuesday"=>"вівторок, ", "wednesday"=>"середа, ", "thursday"=>"четвер, ", "friday"=>"п'ятниця, ", "saturday"=>"субота, ", "sunday"=>"неділя, ");
+    $days = array("monday"=>"понеділок, ", "tuesday"=>"вівторок, ", "wednesday"=>"середа, ", "thursday"=>"четвер, ", "friday"=>"п'ятниця, ", "saturday"=>"субота, ", "sunday"=>"неділя, ");
+    return str_replace(array_merge(array_keys($month), array_keys($days)), array_merge($month, $days), strtolower($date));
+}
 function get_header( $name = null ) {
 	/**
 	 * Fires before the header template file is loaded.
@@ -118,6 +125,30 @@ function get_sidebar( $name = null ) {
 		$templates[] = "sidebar-{$name}.php";
 
 	$templates[] = 'sidebar.php';
+
+	locate_template( $templates, true );
+}
+function get_sidebar_single_post( $name = null ) {
+	/**
+	 * Fires before the sidebar template file is loaded.
+	 *
+	 * The hook allows a specific sidebar template file to be used in place of the
+	 * default sidebar template file. If your file is called sidebar-new.php,
+	 * you would specify the filename in the hook as get_sidebar( 'new' ).
+	 *
+	 * @since 2.2.0
+	 * @since 2.8.0 $name parameter added.
+	 *
+	 * @param string $name Name of the specific sidebar file to use.
+	 */
+	do_action( 'get_sidebar', $name );
+
+	$templates = array();
+	$name = (string) $name;
+	if ( '' !== $name )
+		$templates[] = "sidebar-{$name}.php";
+
+	$templates[] = 'sidebar-single-post.php';
 
 	locate_template( $templates, true );
 }

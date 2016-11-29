@@ -38,6 +38,7 @@
         }*/
         return $title;
     }
+
     add_filter( 'wp_title', 'change_wp_title', 10, 2 );
 ?>
 
@@ -161,7 +162,7 @@
                             <!-- Grid display -->
                             <div class="main__prod col-xs-12 col-md-4 display-style display-style-grid" <?php if ( isset($_COOKIE['display-style']) && $_COOKIE['display-style'] != 'grid' ) echo ' style="display: none;"'; ?> id="post-<?php the_ID(); ?>">
                                 <div class="selling">
-                                    <h3><?php echo $data['operation']; ?></h3>
+                                    <h3><?php ; ?></h3>
                                     <a class="img-container" href="<?php the_permalink(); ?>">
                                         <img src="<?php echo $data['photos'][0]['sizes']['thumbnail']; ?>" alt="<?php echo $data['photos'][0]['alt']; ?>">
                                     </a>
@@ -247,6 +248,23 @@
                                             <div class="row">
                                                 <div class="dtl1 col-xs-12">
                                                     <b><?php echo $data['phone_number']; ?></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="dtl col-xs-12">
+                                                    <p><?php _e('Дата', 'imperia'); ?>:</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="dtl1 col-xs-12">
+                                                    <b><?php echo the_time('d.m.Y'); ?></b>
                                                 </div>
                                             </div>
                                         </div>

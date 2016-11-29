@@ -39,43 +39,51 @@
         $header_style = 3;
         get_template_part( 'header-page' );
     ?>
-
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
     <div class="search">
-        <?php get_template_part( 'search-catalog' ); ?>
+        <?php //get_template_part( 'search-catalog' ); ?>
+<!--        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">-->
+<!--            <a class="clean" href="--><?php //echo home_url('realty'); ?><!--">--><?php //_e('Очистить', 'imperia'); ?><!--</a>-->
+        <!--        </div>-->
     </div>
-    <section>
         <div class="container">
-            <div class="row">
+            <section>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ol class="breadcrumb">
+                            <li><a href="<?php echo home_url(); ?>"><?php _e('На главную', 'imperia'); ?></a></li>
+                            <?php $href = home_url('realty?operation='.$data['operation']); ?>
+                            <li><a href="<?php echo $href; ?>"><?php echo $data['operation_text']; ?></a></li>
+                            <?php $href .= '&type='.$data['type']; ?>
+                            <li><a href="<?php echo $href; ?>"><?php echo $data['type_text']; ?></a></li>
+                            <?php $href .= '&region_id='.$data['region']->term_id; ?>
+                            <li><a href="<?php echo $href; ?>"><?php echo $data['region']->name;; ?></a></li>
+                            <li class="active"><?php the_title(); ?></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
 
-                <?php get_sidebar(); ?>
+                <?php get_sidebar_single_post(); ?>
 
                 <div class="col-xs-12 col-sm-8 col-md-9">
                     <div class="product">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="product-h">
+                        <div class="product-h2">
+                            <div class="row">
+                                <div class="col-xs-12">
                                     <h2><?php the_title(); ?></h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <ol class="breadcrumb">
-                                    <li><a href="<?php echo home_url(); ?>"><?php _e('На главную', 'imperia'); ?></a></li>
-                                    <?php $href = home_url('realty?operation='.$data['operation']); ?>
-                                    <li><a href="<?php echo $href; ?>"><?php echo $data['operation_text']; ?></a></li>
-                                    <?php $href .= '&type='.$data['type']; ?>
-                                    <li><a href="<?php echo $href; ?>"><?php echo $data['type_text']; ?></a></li>
-                                    <?php $href .= '&region_id='.$data['region']->term_id; ?>
-                                    <li><a href="<?php echo $href; ?>"><?php echo $data['region']->name;; ?></a></li>
-                                    <li class="active"><?php the_title(); ?></li>
-                                </ol>
-                            </div>
-                        </div>
+
                         <div class="prdkt">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <h4><?php echo $data['operation_text']; ?></h4>
+                                    <h4><?php ; ?></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -98,8 +106,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-5">
-                                    <b><?php _e('Название улицы', 'imperia'); ?>:</b>
-                                    <h3><?php the_title(); ?></h3>
+
                                     <div class="row">
                                         <div class="col-xs-12">
                                             <div class="rajon">
@@ -140,6 +147,23 @@
                                         <div class="col-xs-12">
                                             <div class="rajon">
                                                 <p><?php echo $data['phone_number_3']; ?> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="dtl col-xs-12">
+                                                    <p><?php _e('Дата оголошення', 'imperia'); ?>:</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="dtl1 col-xs-12">
+                                                    <b><?php echo the_time('d.m.Y'); ?></b>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

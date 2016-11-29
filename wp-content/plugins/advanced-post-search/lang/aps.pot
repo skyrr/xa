@@ -1,0 +1,180 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Advanced Post Search\n"
+"POT-Creation-Date: 2016-04-15 17:31+0200\n"
+"PO-Revision-Date: 2016-04-15 09:24+0200\n"
+"Last-Translator: VarDump s.r.l. <staff@var-dump.it>\n"
+"Language-Team: VarDump s.r.l. <staff@var-dump.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: advanced-post-search.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: advanced-post-search.php:112
+msgid "Advanced Post Search"
+msgstr ""
+
+#: advanced-post-search.php:113
+msgid "FAQ"
+msgstr ""
+
+#: advanced-post-search.php:114 advanced-post-search.php:141
+msgid "Views"
+msgstr ""
+
+#: advanced-post-search.php:146 advanced-post-search.php:154
+msgid "Field Group"
+msgstr ""
+
+#: advanced-post-search.php:190
+msgid "Options"
+msgstr ""
+
+#: advanced-post-search.php:195 advanced-post-search.php:203
+msgid "Option"
+msgstr ""
+
+#: advanced-post-search.php:211
+msgid "Show Groups"
+msgstr ""
+
+#: advanced-post-search.php:216
+msgid "No"
+msgstr ""
+
+#: advanced-post-search.php:217
+msgid "Yes"
+msgstr ""
+
+#: advanced-post-search.php:226
+msgid "Update"
+msgstr ""
+
+#: advanced-post-search.php:251
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: advanced-post-search.php:253
+msgid "Q. How do I use the plugin?"
+msgstr ""
+
+#: advanced-post-search.php:254
+msgid ""
+"A. The main search form is in the posts list (also available for pages or "
+"custom posts) and can be accessed by the \"Advanced Search\" dropdown on the "
+"top right of the screen."
+msgstr ""
+
+#: advanced-post-search.php:257
+msgid "Q. How do I make a search?"
+msgstr ""
+
+#: advanced-post-search.php:258
+msgid ""
+"A. In the \"Advanced Search\" form you can fill one or more fields with the "
+"desired search terms, then press the \"Search\" button to perform the search."
+msgstr ""
+
+#: advanced-post-search.php:261
+msgid "Q. How do I change comparison operator?"
+msgstr ""
+
+#: advanced-post-search.php:262
+msgid ""
+"A. Every search field has different comparison types depending on field "
+"type: in a date field you can search values after or before a date or "
+"between two specific dates."
+msgstr ""
+
+#: advanced-post-search.php:265
+msgid "Q. How do I manage what fields are showed in the search form?"
+msgstr ""
+
+#: advanced-post-search.php:266
+msgid ""
+"A. In the Views page you have a table showing registered post types; for "
+"each post type you can choose what fields you want to show in the search "
+"form by checking the corresponding checkbox."
+msgstr ""
+
+#: advanced-post-search.php:269
+#, php-format
+msgid "For more information mail us at %1$s."
+msgstr ""
+
+#: advanced-post-search.php:315 advanced-post-search.php:346
+msgid "Advanced search"
+msgstr ""
+
+#: advanced-post-search.php:340
+msgid "Search"
+msgstr ""
+
+#: advanced-post-search.php:453
+msgid "WordPress"
+msgstr ""
+
+#: advanced-post-search.php:517
+msgid "Post title"
+msgstr ""
+
+#: advanced-post-search.php:521
+msgid "Status"
+msgstr ""
+
+#: advanced-post-search.php:528
+msgid "Author"
+msgstr ""
+
+#: advanced-post-search.php:535
+msgid "Slug"
+msgstr ""
+
+#: advanced-post-search.php:539
+msgid "Password"
+msgstr ""
+
+#: advanced-post-search.php:543
+msgid "Excerpt"
+msgstr ""
+
+#: advanced-post-search.php:547
+msgid "Content"
+msgstr ""
+
+#: advanced-post-search.php:551
+msgid "Published"
+msgstr ""
+
+#: advanced-post-search.php:555
+msgid "Last Modified"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/advanced-post-search/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Advanced Post Search is a WordPress plugin for anyone who needs an advanced "
+"search for posts (or custom posts) in a WordPress website."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "VarDump s.r.l."
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.var-dump.it/"
+msgstr ""

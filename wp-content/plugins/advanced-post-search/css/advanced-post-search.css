@@ -1,0 +1,130 @@
+#aps-wrap {
+	margin: 0;
+	padding: 8px 20px 12px;
+	position: relative;
+}
+
+#aps-link-wrap {
+	float: right;
+	height: 28px;
+	margin: 0 0 0 6px;
+	border: 1px solid #ddd;
+	border-top: none;
+	background: #fff;
+	-webkit-box-shadow: 0 1px 1px -1px rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px -1px rgba(0,0,0,.1);
+}
+
+.aps-groups {
+	margin: 0 -10px;
+}
+
+fieldset.aps-filters {
+	margin: 0 0 10px 0;
+}
+	fieldset.aps-filters legend {
+		font-weight: bold;
+		padding: 0 10px;
+	}
+
+.aps-filter {
+	padding: 0 10px 10px 10px;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	display: block;
+	height: 70px;
+	float: left;
+	width: 14%;
+}
+	.aps-filter label {
+		display: block;
+	}
+	.aps-filter input,
+	.aps-filter select {
+		width: 100%;
+	}
+	.aps-filter input[type="number"] {
+		padding-bottom: 5px;
+		margin-bottom: 0;
+	}
+
+	.aps-filter button {
+		box-shadow: none !important;
+		position: relative;
+		top: 1px;
+	}
+	.aps-filter .button-with-glyph {
+		padding: 4px 3px 4px 4px !important;
+	}
+
+	.aps-filter .input-prepend {
+		background-color: #f1f1f1;
+		text-align: center;
+		margin-right: -2px;
+		position: relative;
+		cursor: pointer;
+		z-index: 1000;
+		color: black;
+		float: left;
+		width: 39px;
+	}
+	.aps-filter .input-appended,
+	.aps-filter .input-prepended {
+		width: calc(100% - 40px);
+	}
+	.aps-filter .input-prepended.input-appended {
+		width: calc(100% - 78px);
+	}
+	.aps-filter .input-append {
+		background-color: #f1f1f1;
+		text-align: center;
+		margin-left: -2px;
+		position: relative;
+		cursor: pointer;
+		z-index: 1000;
+		color: black;
+		float: right;
+		width: 39px;
+	}
+
+	.aps-filter .options-dropdown {
+		position: absolute;
+		display: none;
+		z-index: 1500;
+		width: 39px;
+		left: 11px;
+		top: 46px;
+	}
+		.aps-filter .options-dropdown > li {
+			margin: 0;
+		}
+			.aps-filter .options-dropdown > li > a {
+				background-color: #f1f1f1;
+				border: 1px solid #dddddd;
+				text-decoration: none;
+				border-top-width: 0;
+				text-align: center;
+				line-height: 25px;
+				display: block;
+				height: 25px;
+				color: black;
+			}
+			.aps-filter .options-dropdown > li > a:hover {
+				background-color: #0073aa;
+				color: white;
+			}
+
+.aps-filter .field-joiner {
+	border-bottom: 1px solid rgb(220, 220, 220);
+	border-top: 1px solid rgb(220, 220, 220);
+	background-color: rgb(252, 252, 252);
+	position: absolute;
+	text-align: center;
+	line-height: 26px;
+	font-size: 10px;
+	height: 26px;
+	right: -11px;
+	width: 22px;
+	top: 31px;
+}

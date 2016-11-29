@@ -169,12 +169,12 @@ if ( ! function_exists( 'aioseop_mrt_pcolumns' ) ) {
 	 * @return mixed
 	 */
 	function aioseop_mrt_pcolumns( $aioseopc ) {
-		global $aioseop_options;
-		$aioseopc['seotitle'] = __( 'SEO Title', 'all-in-one-seo-pack' );
-		$aioseopc['seodesc']  = __( 'SEO Description', 'all-in-one-seo-pack' );
-		if ( empty( $aioseop_options['aiosp_togglekeywords'] ) ) {
-			$aioseopc['seokeywords'] = __( 'SEO Keywords', 'all-in-one-seo-pack' );
-		}
+//		global $aioseop_options;
+//		$aioseopc['seotitle'] = __( 'SEO Title', 'all-in-one-seo-pack' );
+//		$aioseopc['seodesc']  = __( 'SEO Description', 'all-in-one-seo-pack' );
+//		if ( empty( $aioseop_options['aiosp_togglekeywords'] ) ) {
+//			$aioseopc['seokeywords'] = __( 'SEO Keywords', 'all-in-one-seo-pack' );
+//		}
 
 		return $aioseopc;
 	}

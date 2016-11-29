@@ -137,8 +137,6 @@ add_filter('editable_roles', function($roles) {
     return $roles;
 });
 
-
-
 // Check if ACF available
 include_once(ABSPATH.'wp-admin/includes/plugin.php');
 if ( ! function_exists('is_plugin_active') || ! is_plugin_active('advanced-custom-fields/acf.php') ) {

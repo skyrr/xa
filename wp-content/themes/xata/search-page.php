@@ -27,9 +27,7 @@
         <div class="search-line">
             <div class="container">
                 <div class="row">
-
                     <div class="filters" id="filters" data-show="false">
-
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
                             <div class="col-xs-7 col-sm-7 col-md-7">
                                 <div class="form-horizontal">
@@ -95,11 +93,9 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="toggle-filter">
-                        Детальніше <span class="glyphicon glyphicon-chevron-down"></span>
+                        Розширений пошук <span class="glyphicon glyphicon-chevron-down"></span>
                     </div>
-
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
                         <a class="find form_submit"><?php _e('Искать', 'imperia'); ?></a>
                         <p class="x"> </p>

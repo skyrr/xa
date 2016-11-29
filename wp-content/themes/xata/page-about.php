@@ -39,6 +39,11 @@
                             <p><?php echo $data['page_content']; ?></p>
                         </div>
                     </div>
+                    <div class="about-right">
+                        <div class="col-xs-12 col-sm-12 col-md-6">
+                            <p><?php echo do_shortcode('[ap-form]');?></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,16 @@
 
 jQuery(window).load(function() {
 
+	var $ = jQuery;
+
+	//format phone fields
+	$('input[id^=acf-field-phone_number]').each(function () {
+		$(this).on('focusout', function () {
+			var clearPhone = $(this).val().replace(/[^\d]/g, '');
+			$(this).val(clearPhone);
+		});
+	});
+
 	// Only proceed if qTranslate is loaded
 	if (typeof qTranslateConfig != 'object' || typeof qTranslateConfig.qtx != 'object') {
 		return;
