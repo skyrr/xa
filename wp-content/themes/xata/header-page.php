@@ -40,8 +40,8 @@
 				<a class="call-1 popup_callback_open" id="openCallbackPopup"><?php _e('Обратный звонок', 'imperia'); ?></a>
 				<?php get_template_part( 'popup-callback' ); ?>
 				<div class="phone-1">
-					<?php $telephone = get_field('telephones', 'option')[0]; ?>
-					<a class="phone" href="tel:<?php echo $telephone['number']; ?>"><?php echo $telephone['number']; ?></a>
+<!--					--><?php //$telephone = get_field('telephones', 'option')[0]; ?>
+<!--					<a class="phone" href="tel:--><?php //echo $telephone['number']; ?><!--">--><?php //echo $telephone['number']; ?><!--</a>-->
 				</div>
 			</div>
 		</div>

@@ -1,8 +1,10 @@
 <div class="col-xs-12 col-sm-4 col-md-3">
-    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-12">
-        <a class="find form_submit"  onclick="goBack()"><?php _e('Повернутись', 'imperia'); ?></a>
+    <div class="left-nav3">
+        <div class="row">
+            <a class="btn-yellow"  href="<?php echo home_url('realty'); ?>"><?php _e('Повернутись до пошуку', 'imperia'); ?></a>
+        </div>
     </div>
-    <div class="left-nav">
+    <div class="left-nav2">
         <div class="row">
             <h3><?php _e('Квартиры', 'imperia'); ?></h3>
             <ul>

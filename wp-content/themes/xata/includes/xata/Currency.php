@@ -24,7 +24,7 @@ class Currency {
         $this->addSelectValues();
 
         $this->currencies = get_field(self::CURRENCY_OPTION_FIELD, 'option');
-        $this->userCurrency = $this->currencies[0]['code'];
+        $this->userCurrency = $this->currencies[1]['code'];
 
         // Get user currency
         if ( isset($_GET[self::CURRENCY_GET_PARAM]) ) {

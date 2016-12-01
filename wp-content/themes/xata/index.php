@@ -34,8 +34,8 @@
             <div class="back_call">
                 <a class="call popup_callback_open" id="openCallbackPopup"><?php _e('Обратный звонок', 'imperia'); ?></a>
                 <?php get_template_part( 'popup-callback' ); ?>
-                <?php $telephone = get_field('telephones', 'option')[0]; ?>
-                <a class="phone" href="tel:<?php echo $telephone['number']; ?>"><?php echo $telephone['number']; ?></a>
+<!--                //--><?php //$telephone = get_field('telephones', 'option')[0]; ?>
+<!--                <a class="phone" href="tel:--><?php //echo $telephone['number']; ?><!--">--><?php //echo $telephone['number']; ?><!--</a>-->
             </div>
         </div>
         <div class="logo">
@@ -244,6 +244,7 @@
                         };
                         ?>
                         <!-- Grid display -->
+
                         <div class="main__prod col-xs-12 col-md-4 display-style display-style-grid" <?php if ( isset($_COOKIE['display-style']) && $_COOKIE['display-style'] != 'grid' ) echo ' style="display: none;"'; ?> id="post-<?php the_ID(); ?>">
                             <div class="selling">
                                 <h3><?php ; ?></h3>
@@ -467,7 +468,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="div1"></div>
                     <?php $args = array(
                         'post_type' => 'post-realty',
                         'numberposts' => 3,

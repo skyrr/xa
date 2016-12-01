@@ -168,8 +168,18 @@ img {
 .s-cur option {
     color: #000;
 }
-
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
 .back_call {
+    float: right;
+    text-align: center;
+    display: inline-block;
+}
+
+.back_call2 {
     float: right;
     text-align: center;
     display: inline-block;
@@ -608,7 +618,19 @@ input[type="checkbox"] {
 .right_inpt {
     display: inline-block;
 }
-
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
 .find {
     color: #000;
     margin-top: 30px;
@@ -668,6 +690,14 @@ section {
     float: left;
     margin-right: 70px;
 }
+.left-nav2 {
+    display: inline-block;
+    float: left;
+    margin-right: 70px;
+}
+.left-nav3 {
+    margin-right: 70px;
+}
 
 .right_prod {
     display: inline-block;
@@ -680,8 +710,23 @@ section {
     font-size: 18px;
     font-family: AvenirNextCyr-Medium;
 }
+.left-nav2 h3 {
+    color: #000;
+    font-size: 18px;
+    font-family: AvenirNextCyr-Medium;
+}
+.left-nav3 h3 {
+    color: #000;
+    font-size: 18px;
+    font-family: AvenirNextCyr-Medium;
+}
 
 .left-nav ul {
+    list-style-type: none;
+    border-bottom: 1px solid #d0d0d0;
+    width: 100%;
+}
+.left-nav2 ul {
     list-style-type: none;
     border-bottom: 1px solid #d0d0d0;
     width: 100%;
@@ -690,8 +735,16 @@ section {
 .left-nav li {
     padding: 12px 0;
 }
+.left-nav2 li {
+    padding: 12px 0;
+}
 
     .left-nav li a {
+        color: #a7a7a7;
+        font-size: 14px;
+        font-family: AvenirNextCyr-Regular;
+    }
+    .left-nav2 li a {
         color: #a7a7a7;
         font-size: 14px;
         font-family: AvenirNextCyr-Regular;
@@ -701,8 +754,20 @@ section {
             color: #ffc107;
             text-decoration: none;
         }
-
-.back-call {
+        .left-nav2 li a:hover {
+            color: #ffc107;
+            text-decoration: none;
+        }
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+.back-call, .btn-yellow {
     margin-top: 36px;
     margin-bottom: 30px;
     color: #000;
@@ -717,8 +782,11 @@ section {
     text-align: center;
     padding-top: 17px;
 }
+.btn-yellow {
+    margin: 1px 0;
+}
 
-    .back-call:hover {
+    .back-call:hover, .btn-yellow:hover {
         color: #ff8f00;
         text-decoration: none;
         cursor: pointer;
@@ -735,13 +803,43 @@ section {
     font-size: 16px;
     font-family: AvenirNextCyr-Regular;
 }
+.left-nav2 h4 {
+    color: #ffc107;
+    font-size: 16px;
+    font-family: AvenirNextCyr-Regular;
+}
+.left-nav3 h4 {
+    color: #ffc107;
+    font-size: 16px;
+    font-family: AvenirNextCyr-Regular;
+}
 
 .left-nav b {
     font-size: 16px;
     font-family: AvenirNextCyr-Regular;
 }
+.left-nav2 b {
+    font-size: 16px;
+    font-family: AvenirNextCyr-Regular;
+}
 
 .left-nav span {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    color: #8d8d8d;
+    font-size: 16px;
+    font-family: AvenirNextCyr-Regular;
+}
+.left-nav2 span {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    color: #8d8d8d;
+    font-size: 16px;
+    font-family: AvenirNextCyr-Regular;
+}
+.left-nav3 span {
     display: block;
     margin-top: 16px;
     margin-bottom: 15px;
@@ -1256,15 +1354,22 @@ section {
         color: #2d3c46;
     }
 
-.product-h h2 {
+.product-h h3 {
     margin-top: 60px;
     color: #2d3c46;
     font-size: 36px;
     font-family: AvenirNextCyr-Demi;
 }
 .product-h2 h2 {
+    margin-top: 15px;
     color: #2d3c46;
     font-size: 36px;
+    font-family: AvenirNextCyr-Demi;
+}
+.product-h3 h3 {
+    margin-top: 1px;
+    color: #2d3c46;
+    font-size: 20px;
     font-family: AvenirNextCyr-Demi;
 }
 
@@ -2274,6 +2379,9 @@ footer {
 .product-h h2 {
     font-size: 27px;
 }
+.product-h3 h3 {
+    font-size: 30px;
+}
 
 #sync1 .item{
     padding: 0px;
@@ -2341,6 +2449,12 @@ footer {
 .left-nav .filters {
     display: block;
 }
+.left-nav2 .filters {
+    display: none;
+}
+.left-nav2 .filters {
+    display: block;
+}
 .input-line2 .filters {
     display: none;
 }
@@ -2353,6 +2467,19 @@ footer {
     #menu-header-menu li:first-child{
         display: inline-block;
     }
+
+    .product-h3 h3 {
+        margin-top: 8px;
+        margin-bottom: 3px;
+        color: #2d3c46;
+        font-size: 10px;
+        font-family: AvenirNextCyr-Demi;
+    }
+
+    .product-h3 h3 {
+        font-size: 15px;
+    }
+
 
     .team-h1 h1{
         font-size: 34px;
@@ -2367,6 +2494,14 @@ footer {
     }
 
     .left-nav{
+        display: none;
+    }
+    .left-nav2{
+        display: block;
+        float: none;
+    }
+
+    .left-nav2{
         display: none;
     }
 
@@ -2451,6 +2586,28 @@ footer {
         margin-left: 15px;
         text-align: center;
     }
+    .left-nav2{
+        position: relative;
+        z-index: 200;
+    }
+
+    .left-nav2 {
+        margin-top: 0;
+        margin-right: 15px;
+        margin-left: 15px;
+        text-align: center;
+    }
+    .left-nav3{
+        position: relative;
+        z-index: 200;
+    }
+
+    .left-nav3 {
+        margin-top: 10px;
+        margin-right: 15px;
+        margin-left: 15px;
+        text-align: center;
+    }
 
     .order h1{
         font-size: 36px;
@@ -2482,6 +2639,10 @@ footer {
     }
 }
 
+.div1 {
+    box-shadow: 10px 10px 5px #888888;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
     #sync1 .item img {
         max-height: 400px;
@@ -2494,8 +2655,16 @@ footer {
     .menu li, .menu ul li{
         padding-right: 20px;
     }
-
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------*/
     .back_call{
+        margin-top: 35px;
+    }
+    .back_call2{
         margin-top: 35px;
     }
 
@@ -2544,7 +2713,10 @@ footer {
         margin-top: 31px !important;
     }
     .left-nav2{
-        margin-top: 31px !important;
+        margin-top: 1px;
+    }
+    .left-nav3{
+        margin-top: 1px;
     }
 
     .menu {

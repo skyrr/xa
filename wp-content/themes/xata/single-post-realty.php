@@ -50,10 +50,9 @@
 <!--            <a class="clean" href="--><?php //echo home_url('realty'); ?><!--">--><?php //_e('Очистить', 'imperia'); ?><!--</a>-->
         <!--        </div>-->
     </div>
-        <div class="container">
-            <section>
-                <div class="row">
-                    <div class="col-xs-12">
+    <div class="container">
+        <div class="row">
+                <div class="hidden-xs">
                         <ol class="breadcrumb">
                             <li><a href="<?php echo home_url(); ?>"><?php _e('На главную', 'imperia'); ?></a></li>
                             <?php $href = home_url('realty?operation='.$data['operation']); ?>
@@ -64,18 +63,21 @@
                             <li><a href="<?php echo $href; ?>"><?php echo $data['region']->name;; ?></a></li>
                             <li class="active"><?php the_title(); ?></li>
                         </ol>
-                    </div>
                 </div>
+        </div>
+    </div>
+    <div class="container">
+            <section>
                 <div class="row">
 
                 <?php get_sidebar_single_post(); ?>
 
                 <div class="col-xs-12 col-sm-8 col-md-9">
                     <div class="product">
-                        <div class="product-h2">
+                        <div class="product-h3">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <h2><?php the_title(); ?></h2>
+                                    <h3><?php the_title(); ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +85,7 @@
                         <div class="prdkt">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <h4><?php ; ?></h4>
+<!--                                    <h4>--><?php //; ?><!--</h4>-->
                                 </div>
                             </div>
                             <div class="row">
