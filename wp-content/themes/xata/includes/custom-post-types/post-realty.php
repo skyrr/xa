@@ -51,8 +51,8 @@ $adminFilters = new \knopix\AdminFilters('post-realty');
 // Filter by operation
 $values = array(
     '' => __('Операция', 'imperia'),
-    'rent' => __('Аренда', 'imperia'),
     'sell' => __('Купить', 'imperia'),
+    'rent' => __('Аренда', 'imperia'),
 );
 $adminFilters->addSelect('operation', $values);
 
@@ -91,6 +91,7 @@ $adminFilters->addColumnImage('photos', __('Фото', 'imperia'), 'cb');
 
 // Author column
 $adminFilters->addColumn('Author', __('Менеджер', 'imperia'), 'title');
+//$adminFilters->addColumn('id', __('id', 'imperia'), 'title');
 
 // Phone column
 $adminFilters->addColumn('phone_number_owner_1', __('Номер тел.', 'imperia'), 'title', 'Номер телефону');
@@ -123,3 +124,5 @@ $adminFilters->addColumn('top_offer', __('Топ предложение', 'imper
 $adminFilters->addPhoneNumber('phone_number', __('Номер телефону менеджера: ', 'imperia'));
 
 $adminFilters->addOwnerPhoneNumber('owner_phone_number', __('Номер телефону власника: ', 'imperia'));
+
+$adminFilters->addPostId('post_id', __('ID оголошення: ', 'imperia'));

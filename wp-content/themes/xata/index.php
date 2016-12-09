@@ -78,11 +78,13 @@
                                 <div class="form-horizontal">
                                     <div class="form-group form_group_custom">
                                         <label for="square"><?php _e('Площадь от', 'imperia'); ?></label>
-                                        <input type="text" name="area_from" class="form-control" id="square" placeholder="0 м" value="<?php echo $search->getAreaFrom(); ?>">
+<!--                                        <input type="text" name="area_from" class="form-control" id="square" placeholder="0 м" value="--><?php //$pid = $_REQUEST['post_id']; echo $search->getAreaFrom(); ?><!--">-->
+                                        <input type="text" name="area_from" class="form-control" id="square" placeholder="0 м" value="<?php $area_from = "area_from"; cookieSetter($area_from, $_REQUEST[$area_from]); ?>">
                                     </div>
                                     <div class="form-group form_group_custom">
                                         <label for="floor"><?php _e('Этаж от', 'imperia'); ?></label>
-                                        <input type="text" name="floor_from" class="form-control" id="floor" placeholder="0" value="<?php echo $search->getFloorFrom(); ?>">
+                                        <input type="text" name="floor_from" class="form-control" id="floor" placeholder="0" value="<?php $floor_from = "floor_from"; cookieSetter($floor_from, $_REQUEST[$floor_from]); ?>">
+
                                     </div>
                                 </div>
                             </div>
@@ -91,11 +93,11 @@
                                 <div class="form-horizontal">
                                     <div class="form-group form_group_custom">
                                         <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                        <input type="text" name="area_to" class="form-control" id="to" placeholder="0 м" value="<?php echo $search->getAreaTo(); ?>">
+                                        <input type="text" name="area_to" class="form-control" id="to" placeholder="0 м" value="<?php $area_to = "area_to"; cookieSetter($area_to, $_REQUEST[$area_to]); ?>">
                                     </div>
                                     <div class="form-group form_group_custom">
                                         <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                        <input type="text" name="floor_to" class="form-control" id="to" placeholder="0" value="<?php echo $search->getFloorTo(); ?>">
+                                        <input type="text" name="floor_to" class="form-control" id="to" placeholder="0" value="<?php $floor_to = "floor_to"; cookieSetter($floor_to, $_REQUEST[$floor_to]); ?>">
                                     </div>
                                 </div>
                             </div>
@@ -108,11 +110,11 @@
                                 <div class="form-horizontal">
                                     <div class="form-group form_group_custom">
                                         <label for="price"><?php _e('Цена от', 'imperia'); ?></label>
-                                        <input type="text" name="price_from" class="form-control" id="price" placeholder="0 грн" value="<?php echo $search->getPriceFrom(); ?>">
+                                        <input type="text" name="price_from" class="form-control" id="price" placeholder="0 грн" value="<?php $price_from = "price_from"; cookieSetter($price_from, $_REQUEST[$price_from]); ?>">
                                     </div>
                                     <div class="form-group form_group_custom">
                                         <label class="nmb-rooms" for="rooms"><?php _e('Количество <br> комнат от', 'imperia'); ?></label>
-                                        <input type="text" name="rooms_from" class="form-control" id="rooms" placeholder="0" value="<?php echo $search->getRoomsFrom(); ?>">
+                                        <input type="text" name="rooms_from" class="form-control" id="rooms" placeholder="0" value="<?php $rooms_from = "rooms_from"; cookieSetter($rooms_from, $_REQUEST[$rooms_from]); ?>">
                                     </div>
                                 </div>
                             </div>
@@ -120,11 +122,11 @@
                                 <div class="form-horizontal">
                                     <div class="form-group form_group_custom">
                                         <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                        <input type="text" name="price_to" class="form-control" id="to" placeholder="0 грн" value="<?php echo $search->getPriceTo(); ?>">
+                                        <input type="text" name="price_to" class="form-control" id="to" placeholder="0 грн" value="<?php $price_to = "price_to"; cookieSetter($price_to, $_REQUEST[$price_to]); ?>">
                                     </div>
                                     <div class="form-group form_group_custom">
                                         <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                        <input type="text" name="rooms_to" class="form-control" id="to" placeholder="0" value="<?php echo $search->getRoomsTo(); ?>">
+                                        <input type="text" name="rooms_to" class="form-control" id="to" placeholder="0" value="<?php $rooms_to = "rooms_to"; cookieSetter($rooms_to, $_REQUEST[$rooms_to]); ?>">
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +137,7 @@
                                 <div class="form-group form_group_custom currency">
                                     <?php echo $currency->getCurrencySelect('form-currency'); ?>
                                     <p class="x"> </p>
-                                    <a class="clean" href="<?php echo home_url('realty'); ?>"><?php _e('Очистить', 'imperia'); ?></a>
+                                    <a class="clean" href="<?php echo home_url('?operation=sell&type=apartment&region_id=0&area_from=&floor_from=&area_to=&floor_to=&price_from=&rooms_from=&price_to=&rooms_to='); ?>"><?php _e('Очистить', 'imperia'); ?></a>
                                 </div>
                             </div>
                         </div>
@@ -244,8 +246,7 @@
                         };
                         ?>
                         <!-- Grid display -->
-
-                        <div class="main__prod col-xs-12 col-md-4 display-style display-style-grid" <?php if ( isset($_COOKIE['display-style']) && $_COOKIE['display-style'] != 'grid' ) echo ' style="display: none;"'; ?> id="post-<?php the_ID(); ?>">
+                        <div class="main__prod col-xs-12 col-md-4 display-style display-style-grid hidden-xs hidden-sm" <?php if ( isset($_COOKIE['display-style']) && $_COOKIE['display-style'] != 'grid' ) echo ' style="display: none;"'; ?> id="post-<?php the_ID(); ?>">
                             <div class="selling">
                                 <h3><?php ; ?></h3>
                                 <a class="img-container" href="<?php the_permalink(); ?>">
@@ -329,7 +330,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="col-sm-6">
                                         <div class="row">
                                             <div class="dtl1 col-xs-12">
@@ -350,7 +350,6 @@
                                     <div class="col-sm-6">
                                         <div class="row">
                                             <div class="dtl1 col-xs-12">
-<!--                                                <b>--><?php //echo dateToUA(date('j F Y'));; ?><!--</b>-->
                                                 <b><?php echo the_time('d.m.Y'); ?></b>
                                             </div>
                                         </div>
@@ -376,54 +375,57 @@
                             </div>
                         </div>
                         <!-- List display -->
-                        <div class="display-style display-style-list" <?php if ( ! isset($_COOKIE['display-style']) || $_COOKIE['display-style'] != 'list' ) echo ' style="display: none;"'; ?>>
-                            <div class="row" id="post-<?php the_ID(); ?>">
-                                <div class="col-xs-12">
-                                    <div class="selling1">
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <h3><?php echo $data['operation']; ?></h3>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-3">
-                                                <a href="<?php the_permalink(); ?>"><img src="<?php echo $data['photos'][0]['sizes']['thumbnail']; ?>" alt="<?php echo $data['photos'][0]['alt']; ?>" width="270"></a>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <div class="detal-adr">
-                                                    <p><?php _e('Название улицы', 'imperia'); ?></p>
-                                                    <h4><?php the_title(); ?></h4>
-                                                    <div class="row">
-                                                        <div class="col-xs-3">
-                                                            <p><?php _e('Район', 'imperia'); ?>:</p>
-                                                            <b><?php echo $data['region']; ?></b>
-                                                        </div>
-                                                        <div class="col-xs-5">
-                                                            <p><?php _e('Количетво комнат', 'imperia'); ?>:</p>
-                                                            <b><?php echo $data['room_count']; ?></b>
-                                                        </div>
-                                                        <div class="col-xs-4">
-                                                            <p><?php _e('Площадь', 'imperia'); ?>:</p>
-                                                            <b><?php echo $data['area']; ?> <?php _e('м', 'imperia'); ?><sup>2</sup></b>
-                                                        </div>
-                                                    </div>
-                                                    <a href="<?php the_permalink(); ?>" class="detal1"><?php _e('Подробнее', 'imperia'); ?></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-3">
-                                                <p class="vertical-line"></p>
-                                                <div class="price1">
-                                                    <p><?php _e('Цена', 'imperia'); ?></p>
-                                                    <span><?php echo number_format($data['price'], 0, ',', ' '); ?> <?php _e('грн', 'imperia'); ?></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <!--                            <div class="display-style display-style-list">-->
+                        <!--                                <div class="row" id="post---><?php //the_ID(); ?><!--">-->
+                        <div class="main__prod col-xs-12 col-md-4 display-style display-style-grid hidden-md hidden-lg">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <p class="h1-line3"></p>
+                                    <div class="item-title">
+                                        <strong><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></strong>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5 col-md-5 img-middle">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <img src="<?php echo $data['photos'][0]['sizes']['thumbnail']; ?>" alt="<?php echo $data['photos'][0]['alt']; ?>">
+                                    </a>
+                                </div>
+                                <div class="col-xs-7 col-md-7 no-left">
+                                    <dl class="dl-horizontal dl-horizontal-xs selling">
+                                        <dt><?php _e('Район', 'imperia'); ?>:</dt>
+                                        <dd><?php echo $data['region']; ?></dd>
+
+                                        <dt><?php _e('Кімнат', 'imperia'); ?>:</dt>
+                                        <dd><?php echo $data['room_count']; ?></dd>
+
+                                        <dt><?php _e('Площадь', 'imperia'); ?>:</dt>
+                                        <dd><?php echo $data['area']; ?> <?php _e('м', 'imperia'); ?><sup>2</sup></dd>
+
+                                        <?php if ($data['phone_number']) { ?>
+                                            <!--                                                <dt>--><?php //_e('тел.:', 'imperia'); ?><!--</dt>-->
+                                            <!--                                                <dd>--><?php //echo $data['phone_number']; ?><!--</dd>-->
+                                        <?php } ?>
+
+                                        <dt><?php _e('Цена', 'imperia'); ?>:</dt>
+                                        <dd>
+                                            <span><?php echo $currency->getUserPrice($data['price'], $data['currency']); ?></span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="row item-info-inline">
+                                <div class="col-xs-5 text-muted">
+                                            <span>
+                                                <i class="glyphicon glyphicon-calendar"></i> <?php echo the_time('d.m.Y'); ?>
+                                            </span>
+                                </div>
+                                <div class="col-xs-7 no-left">
+                                            <span>
+                                                <?php if (!$data['phone_number']) {
+                                                } else {
+                                                    echo "<i class=\"glyphicon glyphicon-phone-alt\"></i> ".$data['phone_number'];
+//                                                    _e('тел.: ', 'imperia');
+                                                }; ?>
+                                            </span>
                                 </div>
                             </div>
                         </div>

@@ -1501,6 +1501,25 @@ section {
     height: auto;
 }
 
+.img-middle img {
+    width: 100%;
+    height: auto;
+}
+.item-info-inline {
+    text-align: left;
+    font-size: 0.9em;
+}
+.item-info-inline span{
+    padding: 4px 0;
+    line-height: 1.8em;
+}
+.item-title {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    padding: 4px 0;
+    margin-bottom: 6px;
+}
+
 .modal-body {
     width: 100%;
     height: auto;
@@ -2563,7 +2582,7 @@ footer {
     }
 
     .main__prod {
-         padding: 0 15px 30px 15px;
+         padding: 0 15px 15px 15px;
          border-bottom: 1px solid #ffc107;
     }
 
@@ -2641,6 +2660,26 @@ footer {
 
 .div1 {
     box-shadow: 10px 10px 5px #888888;
+}
+dl.dl-horizontal-xs{
+    font-size: 0.9em;
+}
+dl.dl-horizontal-xs dt {
+    float: left;
+    width: 50%;
+    color: #000;
+    text-align: left;
+}
+
+dl.dl-horizontal-xs dd {
+    float: left;
+    width: 50%;
+    color: #000;
+    text-align: right;
+}
+
+.no-left {
+    padding-left: 0;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

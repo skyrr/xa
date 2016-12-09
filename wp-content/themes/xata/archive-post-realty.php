@@ -74,14 +74,13 @@
                             console.log(href_sort);
                         </script>
                         <label for="sorting"><?php _e('Сортировка', 'imperia'); ?>:</label>
-                        <select class="sorting" onchange="window.location = href_sort + this.value;">
-                            <option value="" <?php if( ! $search->getSort() ) echo 'selected'; ?>><?php _e('по дате', 'imperia'); ?></option>
+                        <select id="ThemeSelect" class="sorting" onchange="window.location = href_sort + this.value; saveTheme(this.value);">
+                            <option value="" <?php if( $search->getSort() ) echo 'selected'; ?>><?php _e('по дате', 'imperia'); ?></option>
                             <option value="&sort=price" <?php if( $search->getSort() == 'price' ) echo 'selected'; ?>><?php _e('по цене', 'imperia'); ?></option>
                             <option value="&sort=area" <?php if( $search->getSort() == 'area' ) echo 'selected'; ?>><?php _e('по размеру', 'imperia'); ?></option>
                         </select>
                     </div>
                 </div>
-
                 <div class="col-xs-12 col-sm-8 col-md-9">
                     <div class="search-result">
 <!--                        <div class="col-xs-12 col-md-7">-->
@@ -160,7 +159,7 @@
                                 };
                             ?>
                             <!-- Grid display -->
-                            <div class="main__prod col-xs-12 col-md-4 display-style display-style-grid" <?php if ( isset($_COOKIE['display-style']) && $_COOKIE['display-style'] != 'grid' ) echo ' style="display: none;"'; ?> id="post-<?php the_ID(); ?>">
+                            <div class="main__prod col-xs-12 col-md-4 display-style display-style-grid hidden-xs hidden-sm" <?php if ( isset($_COOKIE['display-style']) && $_COOKIE['display-style'] != 'grid' ) echo ' style="display: none;"'; ?> id="post-<?php the_ID(); ?>">
                                 <div class="selling">
                                     <h3><?php ; ?></h3>
                                     <a class="img-container" href="<?php the_permalink(); ?>">
@@ -289,68 +288,62 @@
                                 </div>
                             </div>
                             <!-- List display -->
-                            <div class="display-style display-style-list" <?php if ( ! isset($_COOKIE['display-style']) || $_COOKIE['display-style'] != 'list' ) echo ' style="display: none;"'; ?>>
-                                <div class="row" id="post-<?php the_ID(); ?>">
-                                    <div class="col-xs-12">
-                                        <div class="selling1">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <h3><?php echo $data['operation']; ?></h3>
-                                                </div>
+<!--                            <div class="display-style display-style-list">-->
+<!--                                <div class="row" id="post---><?php //the_ID(); ?><!--">-->
+                                <div class="main__prod col-xs-12 col-md-4 display-style display-style-grid hidden-md hidden-lg">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="item-title">
+                                                <strong><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></strong>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-xs-3">
-                                                    <a href="<?php the_permalink(); ?>"><img src="<?php echo $data['photos'][0]['sizes']['thumbnail']; ?>" alt="<?php echo $data['photos'][0]['alt']; ?>" width="270"></a>
-                                                </div>
-                                                <div class="col-xs-6">
-                                                    <div class="detal-adr">
-                                                        <p><?php _e('Название улицы', 'imperia'); ?></p>
-                                                        <h4><?php the_title(); ?></h4>
-                                                        <div class="row">
-                                                            <div class="col-xs-3">
-                                                                <p><?php _e('Район', 'imperia'); ?>:</p>
-                                                                <b><?php echo $data['region']; ?></b>
-                                                            </div>
-                                                            <div class="col-xs-5">
-                                                                <p><?php _e('Количетво комнат', 'imperia'); ?>:</p>
-                                                                <b><?php echo $data['room_count']; ?></b>
-                                                            </div>
-                                                            <div class="col-xs-4">
-                                                                <p><?php _e('Площадь', 'imperia'); ?>:</p>
-                                                                <b><?php echo $data['area']; ?> <?php _e('м', 'imperia'); ?><sup>2</sup></b>
-                                                            </div>
-                                                            <div class="col-xs-4">
-                                                                <p><?php _e('Номер телефону', 'imperia'); ?>:</p>
-                                                                <b><?php echo $data['phone_number']; ?></b>
-                                                            </div>
-                                                        </div>
-                                                        <a href="<?php the_permalink(); ?>" class="detal1"><?php _e('Подробнее', 'imperia'); ?></a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-3">
-                                                    <p class="vertical-line"></p>
-                                                    <div class="price1">
-                                                        <p><?php _e('Цена', 'imperia'); ?></p>
-                                                        <span><?php echo number_format($data['price'], 0, ',', ' '); ?> <?php _e('грн', 'imperia'); ?></span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        </div>
+                                        <div class="col-xs-5 col-md-5 img-middle">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <img src="<?php echo $data['photos'][0]['sizes']['thumbnail']; ?>" alt="<?php echo $data['photos'][0]['alt']; ?>">
+                                            </a>
+                                        </div>
+                                        <div class="col-xs-7 col-md-7 no-left">
+                                            <dl class="dl-horizontal dl-horizontal-xs selling">
+                                                <dt><?php _e('Район', 'imperia'); ?>:</dt>
+                                                <dd><?php echo $data['region']; ?></dd>
+
+                                                <dt><?php _e('Кімнат', 'imperia'); ?>:</dt>
+                                                <dd><?php echo $data['room_count']; ?></dd>
+
+                                                <dt><?php _e('Площадь', 'imperia'); ?>:</dt>
+                                                <dd><?php echo $data['area']; ?> <?php _e('м', 'imperia'); ?><sup>2</sup></dd>
+
+                                                <?php if ($data['phone_number']) { ?>
+<!--                                                <dt>--><?php //_e('тел.:', 'imperia'); ?><!--</dt>-->
+<!--                                                <dd>--><?php //echo $data['phone_number']; ?><!--</dd>-->
+                                                <?php } ?>
+
+                                                <dt><?php _e('Цена', 'imperia'); ?>:</dt>
+                                                <dd>
+                                                    <span><?php echo $currency->getUserPrice($data['price'], $data['currency']); ?></span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="row item-info-inline">
+                                        <div class="col-xs-5 text-muted">
+                                            <span>
+                                                <i class="glyphicon glyphicon-calendar"></i> <?php echo the_time('d.m.Y'); ?>
+                                            </span>
+                                        </div>
+                                        <div class="col-xs-7 no-left">
+                                            <span>
+                                                <?php if (!$data['phone_number']) {
+                                                } else {
+                                                    echo "<i class=\"glyphicon glyphicon-phone-alt\"></i> ".$data['phone_number'];
+//                                                    _e('тел.: ', 'imperia');
+                                                }; ?>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <p class="h1-line3"></p>
-                                    </div>
-                                </div>
-                            </div>
                             <?php endwhile; ?>
 
-                        </div>
-                        <div class="row display-style display-style-grid" <?php if ( isset($_COOKIE['display-style']) && $_COOKIE['display-style'] != 'grid' ) echo ' style="display: none;"'; ?>>
-                            <div class="col-xs-12">
-                                <p class="h1-line3"></p>
-                            </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">

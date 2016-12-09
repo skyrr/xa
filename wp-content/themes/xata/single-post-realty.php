@@ -85,7 +85,7 @@
                         <div class="prdkt">
                             <div class="row">
                                 <div class="col-xs-12">
-<!--                                    <h4>--><?php //; ?><!--</h4>-->
+                                    <h4><?php ;?></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -165,6 +165,30 @@
                                             <div class="row">
                                                 <div class="dtl1 col-xs-12">
                                                     <b><?php echo the_time('d.m.Y'); ?></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="dtl col-xs-12">
+                                                    <p><?php _e('№ оголошення', 'imperia'); ?>:</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="dtl1 col-xs-12">
+                                                    <b><?php $id = get_the_ID();
+                                                        echo $id;?></b>
+<!--                                                    --><?php
+//                                                    $id = get_the_ID();
+//                                                    $dropdown = "<select name='dropdown-".$id."' >";
+//                                                    $dropdown .= "<option id='option1-". $id ."'>Option 1</option>";
+//                                                    $dropdown .= "</select>";
+                                                    ?>
                                                 </div>
                                             </div>
                                         </div>

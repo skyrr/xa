@@ -614,6 +614,62 @@ function wp_meta() {
 	do_action( 'wp_meta' );
 }
 
+function cookieSetter($fieldValue, $val2){
+//    if(isset($_SESSION[$fieldValue])) {
+//        if ($_SESSION[$fieldValue] == $val2) {
+//        } else {
+//            if ($val2 == '') {
+//                $_SESSION[$fieldValue] = '';
+//            } else {
+//                $_SESSION[$fieldValue] = $val2;
+//            }
+//        }
+//        $value = $_SESSION[$fieldValue];
+//    } else {
+//        if ($val2 == '') {
+//            $_SESSION[$fieldValue] = '';
+//        } else {
+//            $_SESSION[$fieldValue] = $val2;
+//        }
+//        $value = $_SESSION[$fieldValue];
+//    }
+    //if session has value
+    if (isset($_SESSION[$fieldValue])) {
+        //if session equals field
+        if ($_SESSION[$fieldValue] == $val2) {
+            $value = $_SESSION[$fieldValue];
+            //if session not equals field
+        } else {
+            //if val2 not set
+            if (!isset($_GET[$fieldValue])) {
+                $value = $_SESSION[$fieldValue];
+                //if where is field
+            } else {
+                $_SESSION[$fieldValue] = $val2;
+                $value = $_SESSION[$fieldValue];
+            }
+        }
+        //$value = $_SESSION[$fieldValue];
+        //if session does not have value
+    } else {
+        $_SESSION[$fieldValue] = $val2;
+        $value = $_SESSION[$fieldValue];
+    }
+
+    echo $value;
+}
+
+function cookieUnset(){
+    $_SESSION['area_from'] = '';
+    $_SESSION['floor_from'] = '';
+    $_SESSION['area_to'] = '';
+    $_SESSION['floor_to'] = '';
+    $_SESSION['price_from'] = '';
+    $_SESSION['rooms_from'] = '';
+    $_SESSION['price_to'] = '';
+    $_SESSION['rooms_to'] = '';
+}
+
 /**
  * Displays information about the current site.
  *

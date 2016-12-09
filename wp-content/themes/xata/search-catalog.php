@@ -35,11 +35,12 @@
                             <div class="form-horizontal">
                                 <div class="form-group form_group_custom">
                                     <label for="square"><?php _e('Площадь от', 'imperia'); ?></label>
-                                    <input type="text" name="area_from" class="form-control" id="square" placeholder="0 м" value="<?php echo $search->getAreaFrom(); ?>">
+                                    <input type="text" name="area_from" class="form-control" id="square" placeholder="0 м" value="<?php $area_from = "area_from"; cookieSetter($area_from, $_REQUEST[$area_from]); ?>">
                                 </div>
                                 <div class="form-group form_group_custom">
                                     <label for="floor"><?php _e('Этаж от', 'imperia'); ?></label>
-                                    <input type="text" name="floor_from" class="form-control" id="floor" placeholder="0" value="<?php echo $search->getFloorFrom(); ?>">
+<!--                                    <input type="text" name="floor_from" class="form-control" id="floor" placeholder="0" value="--><?php //$aid = $_REQUEST['floor_from']; echo $aid; ?><!--">-->
+                                    <input type="text" name="floor_from" class="form-control" id="floor" placeholder="0" value="<?php $floor_from = "floor_from"; cookieSetter($floor_from, $_REQUEST[$floor_from]); ?>">
                                 </div>
                             </div>
                         </div>
@@ -48,11 +49,12 @@
                             <div class="form-horizontal">
                                 <div class="form-group form_group_custom">
                                     <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                    <input type="text" name="area_to" class="form-control" id="to" placeholder="0 м" value="<?php echo $search->getAreaTo(); ?>">
+<!--                                    <input type="text" name="area_to" class="form-control" id="to" placeholder="0 м" value="--><?php //$aid = $_REQUEST['area_to']; echo $aid; ?><!--">-->
+                                    <input type="text" name="area_to" class="form-control" id="to" placeholder="0 м" value="<?php $area_to = "area_to"; cookieSetter($area_to, $_REQUEST[$area_to]); ?>">
                                 </div>
                                 <div class="form-group form_group_custom">
                                     <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                    <input type="text" name="floor_to" class="form-control" id="to" placeholder="0" value="<?php echo $search->getFloorTo(); ?>">
+                                    <input type="text" name="floor_to" class="form-control" id="to" placeholder="0" value="<?php $floor_to = "floor_to"; cookieSetter($floor_to, $_REQUEST[$floor_to]); ?>">
                                 </div>
                             </div>
                         </div>
@@ -65,11 +67,11 @@
                             <div class="form-horizontal">
                                 <div class="form-group form_group_custom">
                                     <label for="price"><?php _e('Цена от', 'imperia'); ?></label>
-                                    <input type="text" name="price_from" class="form-control" id="price" placeholder="0 грн" value="<?php echo $search->getPriceFrom(); ?>">
+                                    <input type="text" name="price_from" class="form-control" id="price" placeholder="0 грн" value="<?php $price_from = "price_from"; cookieSetter($price_from, $_REQUEST[$price_from]); ?>">
                                 </div>
                                 <div class="form-group form_group_custom">
                                     <label class="nmb-rooms" for="rooms"><?php _e('Количество <br> комнат от', 'imperia'); ?></label>
-                                    <input type="text" name="rooms_from" class="form-control" id="rooms" placeholder="0" value="<?php echo $search->getRoomsFrom(); ?>">
+                                    <input type="text" name="rooms_from" class="form-control" id="rooms" placeholder="0" value="<?php $rooms_from = "rooms_from"; cookieSetter($rooms_from, $_REQUEST[$rooms_from]); ?>">
                                 </div>
                             </div>
                         </div>
@@ -77,11 +79,11 @@
                             <div class="form-horizontal">
                                 <div class="form-group form_group_custom">
                                     <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                    <input type="text" name="price_to" class="form-control" id="to" placeholder="0 грн" value="<?php echo $search->getPriceTo(); ?>">
+                                    <input type="text" name="price_to" class="form-control" id="to" placeholder="0 грн" value="<?php $price_to = "price_to"; cookieSetter($price_to, $_REQUEST[$price_to]); ?>">
                                 </div>
                                 <div class="form-group form_group_custom">
                                     <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                    <input type="text" name="rooms_to" class="form-control" id="to" placeholder="0" value="<?php echo $search->getRoomsTo(); ?>">
+                                    <input type="text" name="rooms_to" class="form-control" id="to" placeholder="0" value="<?php $rooms_to = "rooms_to"; cookieSetter($rooms_to, $_REQUEST[$rooms_to]); ?>">
                                 </div>
                             </div>
                         </div>
@@ -91,7 +93,7 @@
                         <div class="form-horizontal">
                             <div class="form-group form_group_custom currency">
                                 <?php echo $currency->getCurrencySelect('form-currency'); ?>
-                                <a class="clean" href="<?php echo home_url('realty'); ?>"><?php _e('Очистить', 'imperia'); ?></a>
+                                <a class="clean" href="<?php echo home_url('realty?operation=sell&type=apartment&region_id=0&area_from=&floor_from=&area_to=&floor_to=&price_from=&rooms_from=&price_to=&rooms_to='); ?>"><?php _e('Очистить', 'imperia'); ?></a>
                                 <p class="x"> </p>
                             </div>
                         </div>

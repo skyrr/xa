@@ -54,6 +54,10 @@ class Search {
         return ( $this->_validate($this->data['region_id']) )? $this->data['region_id'] : FALSE;
     }
 
+    public function getPostId() {
+        return ( $this->_validate($this->data['post_id']) )? $this->data['post_id'] : FALSE;
+    }
+
     public function getPhone() {
         return ( $this->_validate($this->data['phone_number']) )? $this->data['phone_number'] : FALSE;
     }
@@ -213,6 +217,14 @@ class Search {
             $result['meta_query'][] = array(
                 'key'     => 'phone_number',
                 'value'   => $this->getPhone(),
+                'type'    => 'numeric',
+                'compare' => '='
+            );
+        }
+        if ( $this->getPostId() ) {
+            $result['meta_query'][] = array(
+                'key'     => 'post_id',
+                'value'   => $this->getPostId(),
                 'type'    => 'numeric',
                 'compare' => '='
             );

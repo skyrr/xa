@@ -33,11 +33,11 @@
                                 <div class="form-horizontal">
                                     <div class="form-group form_group_custom">
                                         <label for="square"><?php _e('Площадь от', 'imperia'); ?></label>
-                                        <input type="text" name="area_from" class="form-control" id="square" placeholder="0 м" value="<?php echo $search->getAreaFrom(); ?>">
+                                        <input type="text" name="area_from" class="form-control" id="square" placeholder="0 м" value="">
                                     </div>
                                     <div class="form-group form_group_custom">
                                         <label for="floor"><?php _e('Этаж от', 'imperia'); ?></label>
-                                        <input type="text" name="floor_from" class="form-control" id="floor" placeholder="0" value="<?php echo $search->getFloorFrom(); ?>">
+                                        <input type="text" name="floor_from" class="form-control" id="floor" placeholder="0" value="">
                                     </div>
                                 </div>
                             </div>
@@ -46,11 +46,11 @@
                                 <div class="form-horizontal">
                                     <div class="form-group form_group_custom">
                                         <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                        <input type="text" name="area_to" class="form-control" id="to" placeholder="0 м" value="<?php echo $search->getAreaTo(); ?>">
+                                        <input type="text" name="area_to" class="form-control" id="to" placeholder="0 м" value="">
                                     </div>
                                     <div class="form-group form_group_custom">
                                         <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                        <input type="text" name="floor_to" class="form-control" id="to" placeholder="0" value="<?php echo $search->getFloorTo(); ?>">
+                                        <input type="text" name="floor_to" class="form-control" id="to" placeholder="0" value="">
                                     </div>
                                 </div>
                             </div>
@@ -63,11 +63,11 @@
                                 <div class="form-horizontal">
                                     <div class="form-group form_group_custom">
                                         <label for="price"><?php _e('Цена от', 'imperia'); ?></label>
-                                        <input type="text" name="price_from" class="form-control" id="price" placeholder="0 грн" value="<?php echo $search->getPriceFrom(); ?>">
+                                        <input type="text" name="price_from" class="form-control" id="price" placeholder="0 грн" value="">
                                     </div>
                                     <div class="form-group form_group_custom">
                                         <label class="nmb-rooms" for="rooms"><?php _e('Количество <br> комнат от', 'imperia'); ?></label>
-                                        <input type="text" name="rooms_from" class="form-control" id="rooms" placeholder="0" value="<?php echo $search->getRoomsFrom(); ?>">
+                                        <input type="text" name="rooms_from" class="form-control" id="rooms" placeholder="0" value="">
                                     </div>
                                 </div>
                             </div>
@@ -75,11 +75,11 @@
                                 <div class="form-horizontal">
                                     <div class="form-group form_group_custom">
                                         <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                        <input type="text" name="price_to" class="form-control" id="to" placeholder="0 грн" value="<?php echo $search->getPriceTo(); ?>">
+                                        <input type="text" name="price_to" class="form-control" id="to" placeholder="0 грн" value="">
                                     </div>
                                     <div class="form-group form_group_custom">
                                         <label for="to"><?php _e('до', 'imperia'); ?></label>
-                                        <input type="text" name="rooms_to" class="form-control" id="to" placeholder="0" value="<?php echo $search->getRoomsTo(); ?>">
+                                        <input type="text" name="rooms_to" class="form-control" id="to" placeholder="0" value="">
                                     </div>
                                 </div>
                             </div>

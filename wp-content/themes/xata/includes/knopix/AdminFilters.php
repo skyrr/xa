@@ -2,7 +2,6 @@
 
 namespace knopix;
 
-
 class AdminFilters
 {
     function __construct($postType = 'post')
@@ -19,6 +18,31 @@ class AdminFilters
      *
      * @return bool
      */
+//    function idsearch( $wp ) {
+//        global $pagenow;
+//
+//        // If it's not the post listing return
+//        if( 'edit.php' != $pagenow )
+//            return;
+//
+//        // If it's not a search return
+//        if( !isset( $wp->query_vars['s'] ) )
+//            return;
+//
+//        // If it's a search but there's no prefix, return
+//        if( '#' != substr( $wp->query_vars['s'], 0, 1 ) )
+//            return;
+//
+//        // Validate the numeric value
+//        $id = absint( substr( $wp->query_vars['s'], 1 ) );
+//        if( !$id )
+//            return; // Return if no ID, absint returns 0 for invalid values
+//
+//        // If we reach here, all criteria is fulfilled, unset search and select by ID instead
+//        unset( $wp->query_vars['s'] );
+//        $wp->query_vars['p'] = $id;
+//    }
+
     public function addTaxonomySelect($taxonomy, $priority = 20) {
         if ( ! $this->checkPostType() ) return FALSE;
         if ( ! isset($taxonomy) ) return FALSE;
@@ -58,9 +82,46 @@ class AdminFilters
             echo '<br><span style="white-space: nowrap"><label style="margin-right: 10px;">'.$label.'
                 <input type="text" placeholder="'.$placeholder.'" size="'.$size.'" name="'. $meta_key .'" value="'. $value .'"/>
             </label></span>';
+
         });
 
         $this->addFilterMulti($meta_key);
+    }
+
+    public function redirect($url, $permanent = false)
+    {
+        if (headers_sent() === false)
+        {
+            header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
+        }
+
+        exit();
+    }
+
+    public function addPostId($meta_key, $label = '', $placeholder = '', $size = 5) {
+        if ( ! $this->checkPostType() ) return FALSE;
+        if ( ! isset($meta_key) ) return FALSE;
+
+        add_action('restrict_manage_posts', function() use ($meta_key, $label, $placeholder, $size) {
+            $value = ( ! empty($_GET[$meta_key]) ) ? $_GET[$meta_key] : '';
+            echo '<br><span style="white-space: nowrap"><label style="margin-right: 10px;">'.$label.'
+                <input type="text" placeholder="'.$placeholder.'" size="'.$size.'" name="'. $meta_key .'" value="'. $value .'"/>
+            </label></span>';
+            $pid = $_REQUEST['post_id'];
+            if (!$pid) {
+
+            } else {
+//                echo '<a href="' . home_url() . '/wp-admin/post.php?post='. $pid .'&action=edit"> Перейти до оголошення: ' . $pid . '   </a>';
+//                $newURL = home_url() . '/wp-admin/post.php?post='. $pid .'&action=edit';
+//                header('Location: '.$newURL);
+//                echo $newURL;
+//                header("Location: post.php?post='. $pid .'&action=edit");
+//                die();
+                echo '<script type="text/javascript">window.location = "post.php?post='. $pid .'&action=edit"</script>';
+            }
+        });
+
+        $this->addFilterId($meta_key);
     }
 
     public function addOwnerPhoneNumber($meta_key, $label = '', $placeholder = '', $size = 5) {
@@ -104,6 +165,30 @@ class AdminFilters
                     'compare' => $compare,
                     'type'    => $type
                 )
+            );
+        });
+    }
+    private function addFilterId($meta_key, $compare = '=', $type = 'CHAR') {
+        global $pagenow;
+        if ( ! is_admin() && $pagenow != 'edit.php') return FALSE;
+        if ( ! isset($_GET[$meta_key]) || $_GET[$meta_key] == '') return FALSE;
+
+        add_filter('parse_query', function($q) use ($meta_key, $compare, $type) {
+
+            $q->query_vars['meta_query'][] = array(
+//                'relation' => 'OR',
+                array(
+                    'key'     => 'post_id',
+                    'value'   => $_REQUEST['post_id'],
+                    'compare' => $compare,
+                    'type'    => $type
+                )//,
+//                array(
+//                    'key'     => 'post_id',
+//                    'value'   => $_GET[$meta_key],
+//                    'compare' => $compare,
+//                    'type'    => $type
+//                )
             );
         });
     }
