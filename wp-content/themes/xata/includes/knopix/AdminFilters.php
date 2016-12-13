@@ -238,7 +238,7 @@ class AdminFilters
                 <input type="text" placeholder="'.$placeholderTo.'" size="'.$size.'" name="'. $meta_key .'[]" value="'.$valueTo.'"/>
             </label></span>';
         });
-        var_dump();
+//        var_dump();
         $this->addFilter($meta_key, 'BETWEEN', 'NUMERIC');
     }
 
