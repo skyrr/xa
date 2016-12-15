@@ -148,3 +148,8 @@ if ( ! function_exists('is_plugin_active') || ! is_plugin_active('advanced-custo
     });
     // return;
 }
+function sess_start() {
+    if (!session_id())
+        session_start();
+}
+add_action('init','sess_start');

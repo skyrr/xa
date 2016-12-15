@@ -1520,6 +1520,21 @@ section {
     margin-bottom: 6px;
 }
 
+.selling-info {
+    width: 100%;
+}
+
+.selling-info td {
+    width: 40%;
+    font-size: 0.9em;
+}
+
+.selling-info td:last-of-type {
+    font-weight: bold;
+    text-align: right;
+    width: 60%;
+}
+
 .modal-body {
     width: 100%;
     height: auto;

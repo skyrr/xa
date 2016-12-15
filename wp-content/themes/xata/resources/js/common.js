@@ -63,7 +63,7 @@
 
 	// Toggle search filter
 	var filterBlock = $('#filters');
-	$(document).on('click', '.toggle-filter, .toggle-filter1', function () {
+	$('.toggle-filter, .toggle-filter1').click(function () {
 		var showed = filterBlock.data('show');
 		var $this = $(this);
 

@@ -115,7 +115,7 @@
                             );
 
                             if ( ! $search->getSort() ) {
-                                $args['orderby'] = 'date';
+                                $args['orderby'] = 'modified';
                                 $args['order'] = 'DESC';
                             } else {
                                 // Modify combined ordering:
@@ -303,26 +303,28 @@
                                             </a>
                                         </div>
                                         <div class="col-xs-7 col-md-7 no-left">
-                                            <dl class="dl-horizontal dl-horizontal-xs selling">
-                                                <dt><?php _e('Район', 'imperia'); ?>:</dt>
-                                                <dd><?php echo $data['region']; ?></dd>
+                                            <table class="selling-info">
+                                                <tbody class="dl-horizontal dl-horizontal-xs selling">
+                                                <?php if ($data['region']) {
+                                                    ?><tr><td><?php _e('Район', 'imperia'); ?>:</td><td><?php echo $data['region']; ?></td></tr>
+                                                <?php }
+                                                ?>
+                                                <?php if ($data['room_count']) {
+                                                    ?><tr><td><?php _e('Кімнат', 'imperia'); ?>:</td><td><?php echo $data['room_count']; ?></td></tr>
+                                                <?php }
+                                                ?>
+                                                <?php if ($data['area']) {
+                                                    ?><tr><td><?php _e('Площадь', 'imperia'); ?>:</td><td><?php echo $data['area']; ?> <?php _e('м', 'imperia'); ?><sup>2</sup></td></tr>
+                                                <?php }
+                                                ?>
+                                                <?php if ($data['price']) {
+                                                    ?><tr><td><?php _e('Цена', 'imperia'); ?>:</td><td><span><?php echo $currency->getUserPrice($data['price'], $data['currency']); ?></span></td></tr>
+                                                <?php }
+                                                ?>
 
-                                                <dt><?php _e('Кімнат', 'imperia'); ?>:</dt>
-                                                <dd><?php echo $data['room_count']; ?></dd>
 
-                                                <dt><?php _e('Площадь', 'imperia'); ?>:</dt>
-                                                <dd><?php echo $data['area']; ?> <?php _e('м', 'imperia'); ?><sup>2</sup></dd>
-
-                                                <?php if ($data['phone_number']) { ?>
-<!--                                                <dt>--><?php //_e('тел.:', 'imperia'); ?><!--</dt>-->
-<!--                                                <dd>--><?php //echo $data['phone_number']; ?><!--</dd>-->
-                                                <?php } ?>
-
-                                                <dt><?php _e('Цена', 'imperia'); ?>:</dt>
-                                                <dd>
-                                                    <span><?php echo $currency->getUserPrice($data['price'], $data['currency']); ?></span>
-                                                </dd>
-                                            </dl>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                     <div class="row item-info-inline">

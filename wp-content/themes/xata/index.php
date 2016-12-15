@@ -183,16 +183,9 @@
                     );
                     $posts_array = get_posts( $args );
 
-                    if ( count($posts_array) > 0 ): ?>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="top">
-                                    <h2><?php _e('Топ-предложение квартиры', 'imperia'); ?></h2>
-                                </div>
-                            </div>
-                        </div>
+                    ?>
 
-                    <?php endif; ?>
+                    <?php ; ?>
                     <div class="row">
                     <?php $args = array(
                         'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
@@ -218,6 +211,38 @@
 
                     query_posts($args); ?>
 
+                            <div class="col-xs-12">
+                                <div class="top">
+                                    <nav>
+                                        <?php
+                                        // Remove anchor from pagination
+                                        $GLOBALS['wp_rewrite']->pagination_base = 'realty/page';
+                                        ?>
+
+                                        <?php
+                                        global $wp_query;
+                                        $big = 999999999; // need an unlikely integer
+                                        $pagination =  paginate_links( array(
+                                            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                                            'format' => '?paged=%#%',
+                                            'current' => max( 1, get_query_var('paged') ),
+                                            'total' => $wp_query->max_num_pages,
+                                            'type' => 'array',
+                                            'prev_text'    => '<span aria-hidden="true">← </span>' . __('Предыдущая', 'imperia'),
+                                            'next_text'    => __('Следующая', 'imperia') . '<span aria-hidden="true"> →</span>',
+                                        ) );
+                                        ?>
+                                        <ul class="pagination">
+                                            <?php if ( is_array($pagination) ): ?>
+                                                <?php foreach($pagination as $item): ?>
+                                                    <li><?php echo $item; ?></li>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        </ul>
+
+                                    </nav>
+                                </div>
+                            </div>
                     <?php while ( have_posts() ) : the_post(); ?>
                         <?php
                         $data = get_fields();
@@ -390,26 +415,28 @@
                                     </a>
                                 </div>
                                 <div class="col-xs-7 col-md-7 no-left">
-                                    <dl class="dl-horizontal dl-horizontal-xs selling">
-                                        <dt><?php _e('Район', 'imperia'); ?>:</dt>
-                                        <dd><?php echo $data['region']; ?></dd>
+                                    <table class="selling-info">
+                                        <tbody class="dl-horizontal dl-horizontal-xs selling">
+                                        <?php if ($data['region']) {
+                                            ?><tr><td><?php _e('Район', 'imperia'); ?>:</td><td><?php echo $data['region']; ?></td></tr>
+                                        <?php }
+                                        ?>
+                                        <?php if ($data['room_count']) {
+                                            ?><tr><td><?php _e('Кімнат', 'imperia'); ?>:</td><td><?php echo $data['room_count']; ?></td></tr>
+                                        <?php }
+                                        ?>
+                                        <?php if ($data['area']) {
+                                            ?><tr><td><?php _e('Площадь', 'imperia'); ?>:</td><td><?php echo $data['area']; ?> <?php _e('м', 'imperia'); ?><sup>2</sup></td></tr>
+                                        <?php }
+                                        ?>
+                                        <?php if ($data['price']) {
+                                            ?><tr><td><?php _e('Цена', 'imperia'); ?>:</td><td><span><?php echo $currency->getUserPrice($data['price'], $data['currency']); ?></span></td></tr>
+                                        <?php }
+                                        ?>
 
-                                        <dt><?php _e('Кімнат', 'imperia'); ?>:</dt>
-                                        <dd><?php echo $data['room_count']; ?></dd>
 
-                                        <dt><?php _e('Площадь', 'imperia'); ?>:</dt>
-                                        <dd><?php echo $data['area']; ?> <?php _e('м', 'imperia'); ?><sup>2</sup></dd>
-
-                                        <?php if ($data['phone_number']) { ?>
-                                            <!--                                                <dt>--><?php //_e('тел.:', 'imperia'); ?><!--</dt>-->
-                                            <!--                                                <dd>--><?php //echo $data['phone_number']; ?><!--</dd>-->
-                                        <?php } ?>
-
-                                        <dt><?php _e('Цена', 'imperia'); ?>:</dt>
-                                        <dd>
-                                            <span><?php echo $currency->getUserPrice($data['price'], $data['currency']); ?></span>
-                                        </dd>
-                                    </dl>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <div class="row item-info-inline">
@@ -466,6 +493,7 @@
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </ul>
+
                                 </nav>
                             </div>
                         </div>
