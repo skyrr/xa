@@ -8,33 +8,6 @@
             <div class="row">
                 <div class="select-line">
                     <div class="container">
-                        <script type="text/javascript">
-                            window.onload = function() {
-                                var e = document.getElementById('select_to_hide');
-                                var strUser = e.options[e.selectedIndex].value;
-//                                alert(strUser);
-                                if(strUser == "territory"){
-                                    // $("#postreply").hide();
-                                    document.getElementById('hidden_div').style.display = 'none';
-                                }
-                            }
-                            function showDiv(select){
-                                if(select.value=="apartment" || select.value=="commerce" || select.value=="house"){
-                                    document.getElementById('hidden_div').style.display = "block";
-                                } else{
-                                    document.getElementById('hidden_div').style.display = "none";
-                                }
-                            }
-                            function showDiv2(select){
-                                if(select.value=="vtorynnyi"){
-                                    document.getElementById('hidden_div1').style.display = "none";
-                                } else{
-                                    document.getElementById('hidden_div1').style.display = "block";
-                                }
-                            }
-
-                        </script>
-
                         <div class="row selects">
                             <div class="col-sm-4">
                                 <select class="s-select1" name="operation">
@@ -43,7 +16,7 @@
                                 </select>
                             </div>
                             <div class="col-sm-4">
-                                <select id="select_to_hide" class="s-select2" name="type" onchange="showDiv(this)">
+                                <select class="s-select2" name="type">
                                     <option value="apartment" <?php if($search->getType() == 'apartment') echo 'selected'; ?>><?php _e('Квартира', 'imperia'); ?></option>
                                     <option value="commerce" <?php if($search->getType() == 'commerce') echo 'selected'; ?>><?php _e('Коммерция', 'imperia'); ?></option>
                                     <option value="house" <?php if($search->getType() == 'house') echo 'selected'; ?>><?php _e('Дом', 'imperia'); ?></option>
@@ -54,30 +27,13 @@
                                 <?php echo $search->getRegionsSelect(); ?>
                             </div>
                         </div>
-<!--                        <div id="hidden_div" class="row selects" style="display:none;">-->
-                        <div id="hidden_div" class="row selects">
-                            <div class="col-sm-4">
-                                <select class="s-select1" name="type2" onchange="showDiv2(this)">
-                                    <option value="" <?php if($search->getType2() == 'novobudova') echo 'selected'; ?>><?php _e('Тип нерухомості : Всі', 'imperia'); ?></option>
-                                    <option value="novobudova" <?php if($search->getType2() == 'novobudova') echo 'selected'; ?>><?php _e(' - новобудова', 'imperia'); ?></option>
-                                    <option value="vtorynnyi" <?php if($search->getType2() == 'vtorynnyi') echo 'selected'; ?>><?php _e(' - вторинний ринок', 'imperia'); ?></option>
-                                </select>
-                            </div>
-                            <div id="hidden_div1"  class="col-sm-4">
-                                <select class="s-select2" name="state">
-                                    <option value="" <?php if($search->getState() == 'zremontom') echo 'selected'; ?>><?php _e('Стан : Всі', 'imperia'); ?></option>
-                                    <option value="zremontom" <?php if($search->getState() == 'zremontom') echo 'selected'; ?>><?php _e(' - з ремонтом', 'imperia'); ?></option>
-                                    <option value="syrets" <?php if($search->getState() == 'syrets') echo 'selected'; ?>><?php _e(' - сирець', 'imperia'); ?></option>
-                                </select>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="filters" id="filters" data-show="false">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
                         <div class="col-xs-7 col-sm-7 col-md-7">
                             <div class="form-horizontal">
-                            <div class="form-group form_group_custom">
+                                <div class="form-group form_group_custom">
                                     <label for="square"><?php _e('Площадь от', 'imperia'); ?></label>
                                     <input type="text" name="area_from" class="form-control" id="square" placeholder="0 м" value="<?php $area_from = "area_from"; cookieSetter($area_from, $_REQUEST[$area_from]); ?>">
                                 </div>

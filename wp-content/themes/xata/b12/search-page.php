@@ -1,23 +1,5 @@
 <?php global $currency; ?>
 <?php $search = new \Xata\Search(); ?>
-<script type="text/javascript">
-    window.onload = function() {
-        var e = document.getElementById('s-select2');
-        var strUser = e.options[e.selectedIndex].value;
-//                                alert(strUser);
-        if(strUser == "house" || strUser == "territory"){
-            // $("#postreply").hide();
-            document.getElementById('hidden_div').style.display = 'none';
-        }
-    }
-    function showDiv(select){
-        if(select.value=="apartment" || select.value=="commerce"){
-            document.getElementById('hidden_div').style.display = "block";
-        } else{
-            document.getElementById('hidden_div').style.display = "none";
-        }
-    }
-</script>
 
 <form action="<?php echo home_url('realty'); ?>" method="get">
     <div class="selection">
@@ -30,7 +12,7 @@
                     </select>
                 </div>
                 <div class="col-sm-4">
-                    <select class="s-select2" name="type" onchange="showDiv(this)">
+                    <select class="s-select2" name="type">
                         <option value="apartment" <?php if($search->getType() == 'apartment') echo 'selected'; ?>><?php _e('Квартира', 'imperia'); ?></option>
                         <option value="commerce" <?php if($search->getType() == 'commerce') echo 'selected'; ?>><?php _e('Коммерция', 'imperia'); ?></option>
                         <option value="house" <?php if($search->getType() == 'house') echo 'selected'; ?>><?php _e('Дом', 'imperia'); ?></option>
@@ -39,22 +21,6 @@
                 </div>
                 <div class="col-sm-4">
                     <?php echo $search->getRegionsSelect(); ?>
-                </div>
-            </div>
-            <div class="row selects"  id="hidden_div">
-                <div class="col-sm-4">
-                    <select class="s-select1" name="novobudova">
-                        <option value="" <?php if($search->getType2() == 'novobudova') echo 'selected'; ?>><?php _e('Тип нерухомості : Всі', 'imperia'); ?></option>
-                        <option value="novobudova" <?php if($search->getType2() == 'novobudova') echo 'selected'; ?>><?php _e(' - новобудова', 'imperia'); ?></option>
-                        <option value="vtorynnyi" <?php if($search->getType2() == 'vtorynnyi') echo 'selected'; ?>><?php _e(' - вторинний ринок', 'imperia'); ?></option>
-                    </select>
-                </div>
-                <div class="col-sm-4">
-                    <select class="s-select2" name="state">
-                        <option value="" <?php if($search->getState() == 'zremontom') echo 'selected'; ?>><?php _e('Стан : Всі', 'imperia'); ?></option>
-                        <option value="zremontom" <?php if($search->getState() == 'zremontom') echo 'selected'; ?>><?php _e(' - з ремонтом', 'imperia'); ?></option>
-                        <option value="syrets" <?php if($search->getState() == 'syrets') echo 'selected'; ?>><?php _e(' - сирець', 'imperia'); ?></option>
-                    </select>
                 </div>
             </div>
         </div>

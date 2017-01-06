@@ -1,34 +1,12 @@
 <?php global $currency; ?>
 <?php $search = new \Xata\Search();
-
+if (!session_id()) {
+    session_start();
+}
 ?>
 
 <?php get_header(); ?>
-<script type="text/javascript">
-    window.onload = function() {
-        var e = document.getElementById('s-select2');
-        var strUser = e.options[e.selectedIndex].value;
-//                                alert(strUser);
-        if(strUser == "territory"){
-            // $("#postreply").hide();
-            document.getElementById('hidden_div').style.display = 'none';
-        }
-    }
-    function showDiv(select){
-        if(select.value=="apartment" || select.value=="commerce" || select.value=="house"){
-            document.getElementById('hidden_div').style.display = "block";
-        } else{
-            document.getElementById('hidden_div').style.display = "none";
-        }
-    }
-    function showDiv2(select){
-        if(select.value=="vtorynnyi"){
-            document.getElementById('hidden_div1').style.display = "none";
-        } else{
-            document.getElementById('hidden_div1').style.display = "block";
-        }
-    }
-</script>
+
 <div class="header">
     <div class="container">
         <div class="left_head left_head_main">
@@ -78,7 +56,7 @@
                         </select>
                     </div>
                     <div class="col-sm-4">
-                        <select id="select_to_hide" class="s-select2" name="type" onchange="showDiv(this)">
+                        <select class="s-select2" name="type">
                             <option value="apartment" <?php if($search->getType() == 'apartment') echo 'selected'; ?>><?php _e('Квартира', 'imperia'); ?></option>
                             <option value="commerce" <?php if($search->getType() == 'commerce') echo 'selected'; ?>><?php _e('Коммерция', 'imperia'); ?></option>
                             <option value="house" <?php if($search->getType() == 'house') echo 'selected'; ?>><?php _e('Дом', 'imperia'); ?></option>
@@ -87,22 +65,6 @@
                     </div>
                     <div class="col-sm-4">
                         <?php echo $search->getRegionsSelect(); ?>
-                    </div>
-                </div>
-                <div id="hidden_div" class="row selects">
-                    <div class="col-sm-4">
-                        <select class="s-select1" name="type2"  onchange="showDiv2(this)">
-                            <option value="" <?php if($search->getType2() == 'novobudova') echo 'selected'; ?>><?php _e('Тип нерухомості : Всі', 'imperia'); ?></option>
-                            <option value="novobudova" <?php if($search->getType2() == 'novobudova') echo 'selected'; ?>><?php _e(' - новобудова', 'imperia'); ?></option>
-                            <option value="vtorynnyi" <?php if($search->getType2() == 'vtorynnyi') echo 'selected'; ?>><?php _e(' - вторинний ринок', 'imperia'); ?></option>
-                        </select>
-                    </div>
-                    <div id="hidden_div1" class="col-sm-4">
-                        <select class="s-select2" name="state">
-                            <option value="" <?php if($search->getState() == 'zremontom') echo 'selected'; ?>><?php _e('Стан : Всі', 'imperia'); ?></option>
-                            <option value="zremontom" <?php if($search->getState() == 'zremontom') echo 'selected'; ?>><?php _e(' - з ремонтом', 'imperia'); ?></option>
-                            <option value="syrets" <?php if($search->getState() == 'syrets') echo 'selected'; ?>><?php _e(' - сирець', 'imperia'); ?></option>
-                        </select>
                     </div>
                 </div>
             </div>
@@ -235,7 +197,7 @@
                     );
 
                     if ( ! $search->getSort() ) {
-                        $args['orderby'] = 'modified';
+                        $args['orderby'] = 'date';
                         $args['order'] = 'DESC';
                     } else {
                         // Modify combined ordering:
@@ -415,7 +377,7 @@
                                     <div class="col-sm-6">
                                         <div class="row">
                                             <div class="dtl1 col-xs-12">
-                                                <b><?php echo the_modified_date('d.m.Y'); ?></b>
+                                                <b><?php echo the_time('d.m.Y'); ?></b>
                                             </div>
                                         </div>
                                     </div>
@@ -482,7 +444,7 @@
                             <div class="row item-info-inline">
                                 <div class="col-xs-5 text-muted">
                                             <span>
-                                                <i class="glyphicon glyphicon-calendar"></i> <?php echo the_modified_date('d.m.Y'); ?>
+                                                <i class="glyphicon glyphicon-calendar"></i> <?php echo the_time('d.m.Y'); ?>
                                             </span>
                                 </div>
                                 <div class="col-xs-7 no-left">

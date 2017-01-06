@@ -46,14 +46,6 @@ class Search {
         return ( $this->_validate($this->data['operation']) )? $this->data['operation'] : FALSE;
     }
 
-    public function getType2() {
-        return ( $this->_validate($this->data['type2']) )? $this->data['type2'] : FALSE;
-    }
-
-    public function getState() {
-        return ( $this->_validate($this->data['state']) )? $this->data['state'] : FALSE;
-    }
-
     public function getType() {
         return ( $this->_validate($this->data['type']) )? $this->data['type'] : FALSE;
     }
@@ -210,20 +202,6 @@ class Search {
             $result['meta_query'][]  = array(
                 'key'     => 'type',
                 'value'   => $this->getType(),
-                'compare' => '='
-            );
-        }
-        if ( $this->getType2() ) {
-            $result['meta_query'][]  = array(
-                'key'     => 'type2',
-                'value'   => $this->getType2(),
-                'compare' => '='
-            );
-        }
-        if ( $this->getState() ) {
-            $result['meta_query'][]  = array(
-                'key'     => 'state',
-                'value'   => $this->getState(),
                 'compare' => '='
             );
         }

@@ -245,6 +245,15 @@
 	});
 })(jQuery);
 
+function validatePhone(field, alerttext) {
+	if (field.match(/^\d{10}/)) {
+		return true;
+	}
+	alert(alerttext);
+	return false;
+}
+
+
 function initialize() {
 	var map;
 	var upravbud = new google.maps.LatLng(49.427447, 26.984324);

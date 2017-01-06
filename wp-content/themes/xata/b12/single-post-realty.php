@@ -164,7 +164,7 @@
                                         <div class="col-sm-6">
                                             <div class="row">
                                                 <div class="dtl1 col-xs-12">
-                                                    <b><?php echo the_modified_date('d.m.Y'); ?></b>
+                                                    <b><?php echo the_time('d.m.Y'); ?></b>
                                                 </div>
                                             </div>
                                         </div>

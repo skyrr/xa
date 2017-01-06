@@ -30,7 +30,7 @@
                 <?php wp_nonce_field('callback_email_send'); ?>
                 <div class="modal-footer btn_reg_padding">
                     <div class="col-sm-12 text-center">
-                        <button type="submit" onsubmit="return validateForm(this)" id="sendCallbackForm" class="find"><?php _e('Заказать звонок', 'imperia'); ?></button>
+                        <button type="submit" id="sendCallbackForm" class="find"><?php _e('Заказать звонок', 'imperia'); ?></button>
                     </div>
                 </div>
             </form>
